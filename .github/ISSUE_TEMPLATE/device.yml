@@ -1,0 +1,26 @@
+name: Device evidence
+description: Report one capability on exact hardware; failures welcome.
+title: "[Evidence] "
+labels: ["device-evidence"]
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Hardware and software
+      description: Model, OS/kernel, app revision, provider/pack version. No serials or private addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: Procedure and expected result
+      description: Steps another operator can repeat, plus what should happen.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Observed result and limits
+      description: Date, evidence kind, failures, sanitized artifacts/checksums and independent reviewer if available.
+    validations:
+      required: true

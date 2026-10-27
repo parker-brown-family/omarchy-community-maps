@@ -1,0 +1,26 @@
+name: Reproducible bug
+description: Public non-sensitive defects; use private security reporting for vulnerabilities.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proof
+      description: Expected versus observed, exact version and sanitized evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduce
+      description: Minimal steps, environment and fixtures.
+    validations:
+      required: true
+  - type: textarea
+    id: invalidate
+    attributes:
+      label: Verify and invalidate
+      description: What would prove the issue no longer applies? What result closes it?
+    validations:
+      required: true

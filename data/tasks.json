@@ -1,0 +1,825 @@
+[
+  {
+    "id": "GOV-01",
+    "title": "Recruit independent stewards and reviewers",
+    "track": "governance",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "steward",
+      "reviewer",
+      "security"
+    ],
+    "scope": [
+      "GOVERNANCE.md",
+      "data/roles.json",
+      ".github/CODEOWNERS"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/gov-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/1"
+  },
+  {
+    "id": "SEC-01",
+    "title": "Audit protection and hostile pull requests",
+    "track": "security",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "security",
+      "reviewer"
+    ],
+    "scope": [
+      ".github/",
+      "tools/",
+      "tests/",
+      "docs/review.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/sec-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/2"
+  },
+  {
+    "id": "DATA-01",
+    "title": "Choose sustainable providers for the pilot",
+    "track": "data",
+    "phase": "P0",
+    "depends_on": [
+      "GOV-01"
+    ],
+    "roles": [
+      "data",
+      "maps"
+    ],
+    "scope": [
+      "docs/providers.md",
+      "data/sources.json",
+      "experiments/providers/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/data-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/3"
+  },
+  {
+    "id": "APP-01",
+    "title": "Compare existing apps on one desktop trip",
+    "track": "desktop",
+    "phase": "P0",
+    "depends_on": [
+      "DATA-01"
+    ],
+    "roles": [
+      "desktop",
+      "maps",
+      "hardware"
+    ],
+    "scope": [
+      "experiments/desktop/",
+      "evidence/records/",
+      "docs/architecture.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/app-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/4"
+  },
+  {
+    "id": "LOC-01",
+    "title": "Specify location state and uncertainty",
+    "track": "location",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "location",
+      "reviewer"
+    ],
+    "scope": [
+      "docs/location.md",
+      "contracts/",
+      "fixtures/location/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/loc-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/5"
+  },
+  {
+    "id": "LOC-02",
+    "title": "Reproduce Linux time and accuracy behavior",
+    "track": "location",
+    "phase": "P0",
+    "depends_on": [
+      "LOC-01"
+    ],
+    "roles": [
+      "location",
+      "linux"
+    ],
+    "scope": [
+      "experiments/location/",
+      "fixtures/location/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/loc-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/6"
+  },
+  {
+    "id": "UX-01",
+    "title": "Define desktop trip and failure screens",
+    "track": "experience",
+    "phase": "P0",
+    "depends_on": [
+      "APP-01",
+      "LOC-01"
+    ],
+    "roles": [
+      "desktop",
+      "touch"
+    ],
+    "scope": [
+      "design/",
+      "docs/device-testing.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/ux-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/7"
+  },
+  {
+    "id": "PKG-01",
+    "title": "Package an x86_64 desktop integration",
+    "track": "packaging",
+    "phase": "P0",
+    "depends_on": [
+      "APP-01",
+      "UX-01",
+      "SEC-01"
+    ],
+    "roles": [
+      "desktop",
+      "linux"
+    ],
+    "scope": [
+      "packages/linux/",
+      "integrations/linux/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/pkg-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/8"
+  },
+  {
+    "id": "ROUTE-01",
+    "title": "Prove walking routes respect pedestrian access",
+    "track": "routing",
+    "phase": "P0",
+    "depends_on": [
+      "DATA-01"
+    ],
+    "roles": [
+      "maps",
+      "hardware"
+    ],
+    "scope": [
+      "fixtures/routes/",
+      "experiments/routing/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/route-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/9"
+  },
+  {
+    "id": "QA-01",
+    "title": "Repeat the desktop trip independently",
+    "track": "qualification",
+    "phase": "P0",
+    "depends_on": [
+      "PKG-01",
+      "ROUTE-01",
+      "LOC-02"
+    ],
+    "roles": [
+      "hardware",
+      "reviewer"
+    ],
+    "scope": [
+      "evidence/records/",
+      "docs/device-testing.md"
+    ],
+    "agent_suitability": "human-only",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/qa-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/10"
+  },
+  {
+    "id": "OPS-01",
+    "title": "Run the bounded community pilot",
+    "track": "governance",
+    "phase": "P0",
+    "depends_on": [
+      "GOV-01",
+      "DATA-01"
+    ],
+    "roles": [
+      "steward",
+      "automation"
+    ],
+    "scope": [
+      "docs/pilot.md",
+      "receipts/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/ops-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/11"
+  },
+  {
+    "id": "ARM-01",
+    "title": "Qualify Apple Silicon Linux",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "QA-01"
+    ],
+    "roles": [
+      "linux",
+      "hardware"
+    ],
+    "scope": [
+      "packages/linux/",
+      "platforms/apple/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/arm-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/12"
+  },
+  {
+    "id": "ARM-02",
+    "title": "Qualify other ARM Linux computers",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "QA-01"
+    ],
+    "roles": [
+      "linux",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/arm-linux/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/arm-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/13"
+  },
+  {
+    "id": "TAB-01",
+    "title": "Qualify x86 tablets and convertibles",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "QA-01",
+      "UX-02"
+    ],
+    "roles": [
+      "linux",
+      "touch",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/tablets/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/tab-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/14"
+  },
+  {
+    "id": "TAB-02",
+    "title": "Qualify ARM Linux tablets",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "ARM-02",
+      "UX-02"
+    ],
+    "roles": [
+      "linux",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/tablets/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/tab-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/15"
+  },
+  {
+    "id": "UX-02",
+    "title": "Adapt touch and accessibility",
+    "track": "experience",
+    "phase": "P1",
+    "depends_on": [
+      "UX-01"
+    ],
+    "roles": [
+      "touch",
+      "hardware"
+    ],
+    "scope": [
+      "design/",
+      "integrations/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/ux-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/16"
+  },
+  {
+    "id": "AND-01",
+    "title": "Choose Android integration and handoff",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "APP-01",
+      "LOC-01"
+    ],
+    "roles": [
+      "android",
+      "location"
+    ],
+    "scope": [
+      "platforms/android/",
+      "contracts/",
+      "experiments/android/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/and-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/17"
+  },
+  {
+    "id": "AND-02",
+    "title": "Qualify Android on Pixel and another vendor",
+    "track": "qualification",
+    "phase": "P1",
+    "depends_on": [
+      "AND-01",
+      "UX-02"
+    ],
+    "roles": [
+      "android",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/android/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "human-only",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/and-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/18"
+  },
+  {
+    "id": "MOB-01",
+    "title": "Integrate native Linux Pixel location",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "LOC-02",
+      "UX-02"
+    ],
+    "roles": [
+      "linux",
+      "location",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/linux-phone/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/mob-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/19"
+  },
+  {
+    "id": "MOB-02",
+    "title": "Audit Phonechy and other phone ports",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "LOC-01"
+    ],
+    "roles": [
+      "linux",
+      "hardware"
+    ],
+    "scope": [
+      "platforms/linux-phone/",
+      "data/sources.json"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/mob-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/20"
+  },
+  {
+    "id": "BRIDGE-01",
+    "title": "Evaluate Android Linux-guest location",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "AND-01",
+      "LOC-01"
+    ],
+    "roles": [
+      "android",
+      "location",
+      "security"
+    ],
+    "scope": [
+      "experiments/guest-bridge/",
+      "docs/architecture.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/bridge-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/21"
+  },
+  {
+    "id": "PACK-01",
+    "title": "Specify offline pack lifecycle",
+    "track": "data",
+    "phase": "P1",
+    "depends_on": [
+      "DATA-01",
+      "APP-01"
+    ],
+    "roles": [
+      "data",
+      "maps",
+      "security"
+    ],
+    "scope": [
+      "contracts/",
+      "experiments/packs/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/pack-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/22"
+  },
+  {
+    "id": "PACK-02",
+    "title": "Prove offline display search and routing",
+    "track": "qualification",
+    "phase": "P1",
+    "depends_on": [
+      "PACK-01"
+    ],
+    "roles": [
+      "maps",
+      "hardware"
+    ],
+    "scope": [
+      "fixtures/offline/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/pack-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/23"
+  },
+  {
+    "id": "HAND-01",
+    "title": "Share a destination safely",
+    "track": "integration",
+    "phase": "P1",
+    "depends_on": [
+      "AND-01",
+      "LOC-01"
+    ],
+    "roles": [
+      "desktop",
+      "android",
+      "security"
+    ],
+    "scope": [
+      "contracts/",
+      "integrations/handoff/",
+      "fixtures/uris/"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/hand-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/24"
+  },
+  {
+    "id": "NAV-01",
+    "title": "Qualify outdoor walking guidance",
+    "track": "qualification",
+    "phase": "P2",
+    "depends_on": [
+      "QA-01",
+      "MOB-01",
+      "PACK-02"
+    ],
+    "roles": [
+      "location",
+      "hardware",
+      "reviewer"
+    ],
+    "scope": [
+      "evidence/records/",
+      "docs/device-testing.md"
+    ],
+    "agent_suitability": "human-only",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/nav-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/25"
+  },
+  {
+    "id": "NAV-02",
+    "title": "Qualify screen-off audio and power",
+    "track": "qualification",
+    "phase": "P2",
+    "depends_on": [
+      "NAV-01",
+      "AND-02"
+    ],
+    "roles": [
+      "android",
+      "linux",
+      "hardware"
+    ],
+    "scope": [
+      "evidence/records/",
+      "docs/device-testing.md"
+    ],
+    "agent_suitability": "human-only",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/nav-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/26"
+  },
+  {
+    "id": "PRIV-01",
+    "title": "Audit map and location privacy",
+    "track": "security",
+    "phase": "P0",
+    "depends_on": [
+      "LOC-01",
+      "DATA-01"
+    ],
+    "roles": [
+      "security",
+      "data"
+    ],
+    "scope": [
+      "docs/privacy.md",
+      "experiments/privacy/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/priv-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/27"
+  },
+  {
+    "id": "REL-01",
+    "title": "Design signed releases and rollback",
+    "track": "release",
+    "phase": "P1",
+    "depends_on": [
+      "SEC-01",
+      "PKG-01"
+    ],
+    "roles": [
+      "release",
+      "security"
+    ],
+    "scope": [
+      "docs/releases.md",
+      ".github/",
+      "packages/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/rel-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/28"
+  },
+  {
+    "id": "INT-01",
+    "title": "Define mesh and weather overlay contracts",
+    "track": "integration",
+    "phase": "P1",
+    "depends_on": [
+      "HAND-01",
+      "DATA-01"
+    ],
+    "roles": [
+      "desktop",
+      "maps"
+    ],
+    "scope": [
+      "contracts/overlays/",
+      "integrations/",
+      "docs/inspirations.md"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/int-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/29"
+  },
+  {
+    "id": "WEB-01",
+    "title": "Evaluate browser planning fallback",
+    "track": "platforms",
+    "phase": "P1",
+    "depends_on": [
+      "DATA-01",
+      "UX-02"
+    ],
+    "roles": [
+      "desktop",
+      "touch",
+      "security"
+    ],
+    "scope": [
+      "experiments/web/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/web-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/30"
+  },
+  {
+    "id": "ROAD-01",
+    "title": "Qualify cycling and driving",
+    "track": "routing",
+    "phase": "P3",
+    "depends_on": [
+      "ROUTE-01",
+      "NAV-01"
+    ],
+    "roles": [
+      "maps",
+      "hardware"
+    ],
+    "scope": [
+      "fixtures/routes/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/road-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/31"
+  },
+  {
+    "id": "TRANSIT-01",
+    "title": "Assess transit and live data",
+    "track": "routing",
+    "phase": "P3",
+    "depends_on": [
+      "DATA-01"
+    ],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/transit/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/transit-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/32"
+  },
+  {
+    "id": "DOC-01",
+    "title": "Verify contributor onboarding",
+    "track": "documentation",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "docs",
+      "automation"
+    ],
+    "scope": [
+      "CONTRIBUTING.md",
+      "docs/agent-contract.md",
+      "docs/onboarding.md"
+    ],
+    "agent_suitability": "suitable",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/doc-01.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/33"
+  },
+  {
+    "id": "DOC-02",
+    "title": "Translate and test user workflows",
+    "track": "documentation",
+    "phase": "P2",
+    "depends_on": [
+      "QA-01"
+    ],
+    "roles": [
+      "docs",
+      "hardware"
+    ],
+    "scope": [
+      "docs/translations/",
+      "evidence/records/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/doc-02.md",
+    "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/34"
+  }
+]

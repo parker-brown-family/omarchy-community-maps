@@ -1,0 +1,138 @@
+[
+  {
+    "id": "omamesh",
+    "url": "https://github.com/clartek/omamesh",
+    "license": "MIT; GitHub API checked today",
+    "decision": "Scuttle bounded coordinate/QML patterns; no code imported.",
+    "scope": "Mesh map inspiration, not a routing engine.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "omastorm",
+    "url": "https://github.com/wesleygrimes/omastorm",
+    "license": "MIT; GitHub API checked today",
+    "decision": "Scuttle Rust/QML boundary, data freshness and pinned engine delivery.",
+    "scope": "Weather overlay inspiration; no endorsement implied.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "phonechy",
+    "url": "https://phonechy.org/",
+    "license": "Source license not established",
+    "decision": "Learn touch experience; verify source/license before reuse.",
+    "scope": "Correct name/independent community status verified in primary website metadata.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "omarchy-mobile",
+    "url": "https://github.com/derekross/omarchy-mobile",
+    "license": "Mixed per-file/kernel; inspect each part",
+    "decision": "Scuttle device profiles/location integration; kernel ownership upstream.",
+    "scope": "Current main f5da1df4844b6fe6a153c0d7ba24d4bd9af31a56; earlier GNSS analysis ef8b6424ef2754ef8c27f0da0ba58c2c84e6faf5.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "comaps",
+    "url": "https://codeberg.org/comaps/comaps",
+    "license": "Inspect component licenses and AI contribution rules",
+    "decision": "Reuse/integrate before considering fork.",
+    "scope": "Offline navigation candidate; Linux/device lifecycle unqualified here.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "comaps-product",
+    "url": "https://www.comaps.app/",
+    "license": "Product docs",
+    "decision": "Learn existing offline search/routing.",
+    "scope": "Published features are not this project certification.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "gnome-maps",
+    "url": "https://gitlab.gnome.org/GNOME/gnome-maps",
+    "license": "Inspect GPL/dependency licenses",
+    "decision": "Compare existing desktop app.",
+    "scope": "Version-specific online/offline behavior.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "omamap",
+    "url": "https://github.com/thebytorsnowdog/omamap",
+    "license": "MIT in prior inspection; recheck",
+    "decision": "Scuttle Qt/WebEngine/Leaflet GIS ideas.",
+    "scope": "Not full navigation platform.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "omarchy-earth",
+    "url": "https://github.com/PietjePuh/omarchy-earth",
+    "license": "MIT in prior inspection; recheck",
+    "decision": "Learn profile-discriminating tests.",
+    "scope": "Earlier car/foot routes identical; rerun before claiming current defect.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "omakeel",
+    "url": "https://github.com/shieldsworks/omakeel",
+    "license": "MIT in prior inspection; recheck",
+    "decision": "Scuttle GPS/AIS service boundary if useful.",
+    "scope": "Not mobile lifecycle proof.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "osm-tiles",
+    "url": "https://operations.osmfoundation.org/policies/tiles/",
+    "license": "Service policy",
+    "decision": "No public-endpoint offline packs/bulk prefetch.",
+    "scope": "Attribution/identity/caching required.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "nominatim",
+    "url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "license": "Service policy",
+    "decision": "No generic public endpoint default or autocomplete.",
+    "scope": "Aggregate app max 1 request/second; explicit operator.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "android-location",
+    "url": "https://developer.android.com/develop/sensors-and-location/location/permissions",
+    "license": "Official docs",
+    "decision": "Use native permission/lifecycle contract.",
+    "scope": "Approximate/precise and foreground/background differ.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "web-location",
+    "url": "https://www.w3.org/TR/geolocation/",
+    "license": "W3C specification",
+    "decision": "Foreground browser fallback candidate.",
+    "scope": "Permission/secure context do not guarantee GPS/background.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "asahi",
+    "url": "https://asahilinux.org/fedora/",
+    "license": "Upstream support",
+    "decision": "Model-specific OS prerequisite.",
+    "scope": "Linux/Omarchy/app qualification are separate.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "github-rules",
+    "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets",
+    "license": "Official docs",
+    "decision": "Verify live enforcement.",
+    "scope": "Owner can edit settings; account compromise remains.",
+    "checked_on": "2026-10-27"
+  },
+  {
+    "id": "github-actions",
+    "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "license": "Official docs",
+    "decision": "Read-only, pinned actions; no untrusted execution in privileged job.",
+    "scope": "Checks do not replace independent source review.",
+    "checked_on": "2026-10-27"
+  }
+]

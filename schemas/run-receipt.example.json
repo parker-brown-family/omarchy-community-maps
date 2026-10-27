@@ -1,0 +1,22 @@
+{
+  "task": "DOC-01",
+  "base_revision": null,
+  "operator": null,
+  "agent_tool": null,
+  "model": null,
+  "cap_minutes": null,
+  "cap_cost": null,
+  "currency": null,
+  "elapsed_minutes": null,
+  "input_tokens": null,
+  "cached_tokens": null,
+  "output_tokens": null,
+  "cost": null,
+  "cost_kind": "unknown",
+  "cost_method": null,
+  "commands": [],
+  "tests_not_run": [],
+  "failures": [],
+  "artifacts": [],
+  "limitations": []
+}

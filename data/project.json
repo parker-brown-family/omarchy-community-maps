@@ -1,0 +1,18 @@
+{
+  "name": "Omarchy Community Maps",
+  "as_of": "2026-10-27",
+  "schema_version": 1,
+  "stage": "foundation",
+  "application_release": null,
+  "default_branch": "master",
+  "entrypoints": {
+    "agent": "AGENTS.md",
+    "tasks": "data/tasks.json",
+    "roles": "data/roles.json",
+    "platforms": "data/platforms.json",
+    "capabilities": "data/capabilities.json",
+    "evidence": "evidence/records/",
+    "board": "docs/contribution-map.html"
+  },
+  "support_claim": "No device certified yet"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "pending-live-verification-at-seed",
+  "audit_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/35",
+  "seed_exception": "One initial push before rules; no collaborators added",
+  "default_branch": "master",
+  "ruleset_id": null,
+  "last_verified_at": null,
+  "warning": "Read the linked audit for measured results; this seed snapshot is not proof of enforcement."
+}

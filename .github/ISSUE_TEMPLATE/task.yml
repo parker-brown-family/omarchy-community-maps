@@ -1,0 +1,26 @@
+name: Task proposal or claim
+description: Offer one bounded contribution.
+title: "[Task] "
+labels: ["proposal"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task and role
+      description: Link the task packet; offer your role, experience and independent reviewer if available.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and acceptance
+      description: Exact output, paths, base revision, dependencies and repeatable success/failure test.
+    validations:
+      required: true
+  - type: textarea
+    id: cap
+    attributes:
+      label: Capacity and limits
+      description: Time/spend cap, hardware access and stop conditions. Keep credentials private.
+    validations:
+      required: true

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "steward",
+    "name": "Project steward",
+    "responsibility": "Scope, sequencing, pilot limits and disputes",
+    "authority": "Appoint reviewers; accept scope; stop work",
+    "who": "Human accountable maintainer",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "reviewer",
+    "name": "Independent reviewer",
+    "responsibility": "Repeat results and inspect exact diff",
+    "authority": "Approve or request changes; never own work",
+    "who": "Human with domain knowledge",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "security",
+    "name": "Security reviewer",
+    "responsibility": "CI, permissions, secrets, parsers, dependencies and releases",
+    "authority": "Hold unsafe merges; private reports",
+    "who": "Human; agents may advise",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "desktop",
+    "name": "Desktop integrator",
+    "responsibility": "Desktop trip and keyboard workflow",
+    "authority": "Propose integrations and packaging",
+    "who": "Developer supervising any agent",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "touch",
+    "name": "Touch and accessibility designer",
+    "responsibility": "Small screens, rotation, keyboard, screen readers",
+    "authority": "Define UI acceptance scenarios",
+    "who": "Human tester/designer",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "location",
+    "name": "Location engineer",
+    "responsibility": "Time, uncertainty, provenance, permissions",
+    "authority": "Design adapters and replay tests",
+    "who": "Developer; hardware proof needs operator",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "maps",
+    "name": "Map and routing engineer",
+    "responsibility": "Renderers, geocoders, route engines and profiles",
+    "authority": "Propose providers and fixtures",
+    "who": "Developer/GIS specialist",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "data",
+    "name": "Map data steward",
+    "responsibility": "Licensing, attribution, packs, freshness and cost",
+    "authority": "Approve provider plan within declared budget",
+    "who": "Human operator; qualified legal advice where needed",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "linux",
+    "name": "Linux platform maintainer",
+    "responsibility": "x86_64/aarch64 packaging, GeoClue, portals",
+    "authority": "Own named Linux lane and regressions",
+    "who": "Developer with target access",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "android",
+    "name": "Android platform maintainer",
+    "responsibility": "Location, lifecycle, distribution and handoff",
+    "authority": "Own Android lane and permissions tests",
+    "who": "Developer with target access",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "hardware",
+    "name": "Device tester",
+    "responsibility": "Run procedures on named hardware; report failures",
+    "authority": "Submit observations; reviewer certifies",
+    "who": "Human physical-device operator",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "automation",
+    "name": "Agent operator",
+    "responsibility": "One accepted task on own account with caps",
+    "authority": "Submit one PR and usage/results receipt",
+    "who": "Accountable human; agent disclosed",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "release",
+    "name": "Release custodian",
+    "responsibility": "Reproducibility, SBOM, signing and rollback",
+    "authority": "Publish after release gate",
+    "who": "Human; protected environment required",
+    "maintainers": [],
+    "status": "vacant"
+  },
+  {
+    "id": "docs",
+    "name": "Documentation and translation contributor",
+    "responsibility": "Fresh-reader installation and evidence",
+    "authority": "Improve docs/language with reader review",
+    "who": "Writer/tester; agents may assist",
+    "maintainers": [],
+    "status": "vacant"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "install",
+    "name": "Install, update and remove",
+    "acceptance": "Clean install/launch/upgrade/removal at pinned version.",
+    "phase": "P0"
+  },
+  {
+    "id": "display",
+    "name": "Display a map",
+    "acceptance": "Attribution, scaling and network errors.",
+    "phase": "P0"
+  },
+  {
+    "id": "search",
+    "name": "Find a place",
+    "acceptance": "Address/POI/ambiguous/no-result fixtures.",
+    "phase": "P0"
+  },
+  {
+    "id": "manual-start",
+    "name": "Choose a start",
+    "acceptance": "Manual planning without measured location.",
+    "phase": "P0"
+  },
+  {
+    "id": "walking",
+    "name": "Plan a walking route",
+    "acceptance": "Pedestrian-discriminating geometry and profile.",
+    "phase": "P0"
+  },
+  {
+    "id": "location",
+    "name": "Use current location",
+    "acceptance": "Permission, observation time, uncertainty, stale/denied/absent.",
+    "phase": "P0"
+  },
+  {
+    "id": "touch",
+    "name": "Touch and accessibility",
+    "acceptance": "Rotation, keyboard, screen reader, scaling.",
+    "phase": "P1"
+  },
+  {
+    "id": "offline-display",
+    "name": "Offline map packs",
+    "acceptance": "Terms, disk budget, corruption/interruption recovery.",
+    "phase": "P1"
+  },
+  {
+    "id": "offline-search",
+    "name": "Offline place search",
+    "acceptance": "Disconnected search, coverage and pack version.",
+    "phase": "P1"
+  },
+  {
+    "id": "offline-routing",
+    "name": "Offline routing",
+    "acceptance": "Disconnected correct mode and missing region.",
+    "phase": "P1"
+  },
+  {
+    "id": "navigation",
+    "name": "Live guidance",
+    "acceptance": "Physical route, off-route and fix recovery.",
+    "phase": "P2"
+  },
+  {
+    "id": "screen-off",
+    "name": "Screen-off guidance",
+    "acceptance": "Locked-screen audio/GPS and lifecycle.",
+    "phase": "P2"
+  },
+  {
+    "id": "power",
+    "name": "Power and thermal budget",
+    "acceptance": "Measured duration/delta/baseline/conditions.",
+    "phase": "P2"
+  },
+  {
+    "id": "handoff",
+    "name": "Safe trip handoff",
+    "acceptance": "Bounded URI/data exchange with confirmation.",
+    "phase": "P1"
+  },
+  {
+    "id": "cycling-driving",
+    "name": "Cycling and driving",
+    "acceptance": "Discriminating fixtures/restrictions/traffic limits.",
+    "phase": "P3"
+  },
+  {
+    "id": "transit",
+    "name": "Transit and live information",
+    "acceptance": "Feed coverage, freshness, terms and outage.",
+    "phase": "P3"
+  }
+]

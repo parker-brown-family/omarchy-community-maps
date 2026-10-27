@@ -1,0 +1,23 @@
+{
+  "id": "example-only",
+  "profile": "desktop-intel",
+  "capability": "display",
+  "kind": "physical",
+  "status": "not-tested",
+  "scenario": "Replace with exact scenario",
+  "revision": null,
+  "hardware": null,
+  "os_build": null,
+  "provider_version": null,
+  "operator": null,
+  "reviewer": null,
+  "tested_at": null,
+  "expires_at": null,
+  "procedure": [],
+  "expected": null,
+  "observed": null,
+  "artifacts": [],
+  "limitations": [
+    "Template only, not evidence."
+  ]
+}

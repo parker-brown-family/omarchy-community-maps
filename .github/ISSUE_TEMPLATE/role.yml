@@ -1,0 +1,19 @@
+name: Offer a maintainer or reviewer role
+description: Help own scope, review or operation.
+title: "[Role] "
+labels: ["maintainer-needed"]
+body:
+  - type: textarea
+    id: offer
+    attributes:
+      label: Role and experience
+      description: Role from the work map, relevant public work and review experience.
+    validations:
+      required: true
+  - type: textarea
+    id: availability
+    attributes:
+      label: Availability and responsibility
+      description: Time, hardware, review scope and conflicts. No access is granted by this form.
+    validations:
+      required: true
