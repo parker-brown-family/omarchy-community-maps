@@ -5,8 +5,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"tools"))
 def module(name):
     s=importlib.util.spec_from_file_location(name,ROOT/"tools"/(name+".py"))
     m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
@@ -21,7 +23,7 @@ class PolicyTests(unittest.TestCase):
                     procedure=["Observe the test fixture"],expected="Expected test result",observed="Observed test result",
                     artifacts=[dict(url="https://example.org/fixture",sha256="b"*64,description="test fixture")],
                     limitations=["Unit test only"])
-    def check(self,e):v.validate_evidence(e,{"test":{"hardware":"test model","os_build":"test OS"}},{"display":{}})
+    def check(self,e):v.validate_evidence(e,{"test":{"hardware":"test model","os_build":"test OS","device_id":"test-device","configuration":{"model_identifier":"test-model-id"}}},{"display":{}})
     def test_family_profile_cannot_be_verified(self):
         with self.assertRaises(v.Invalid):v.validate_evidence(self.evidence(),{"test":{"hardware":None,"os_build":None}},{"display":{}})
     def test_complete_physical_record_structure(self):self.check(self.evidence())

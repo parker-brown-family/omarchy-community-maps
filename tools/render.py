@@ -6,6 +6,7 @@ from html import escape
 import json
 from pathlib import Path
 import sys
+import devices
 
 ROOT=Path(__file__).resolve().parents[1]
 def h(x):return escape(str(x),quote=True)
@@ -72,7 +73,9 @@ def outputs(root):
 <footer><p>Generated from canonical JSON. No analytics, external scripts, map requests or account connection. <a href="https://github.com/parker-brown-family/omarchy-community-maps">Open the repository</a>.</p></footer>"""
     script="""const q=document.querySelector('#query'),p=document.querySelector('#phase'),r=document.querySelector('#role');function filter(){let n=0;document.querySelectorAll('.task').forEach(t=>{const show=(!p.value||t.dataset.phase===p.value)&&(!r.value||t.dataset.roles.split(' ').includes(r.value))&&t.textContent.toLowerCase().includes(q.value.toLowerCase());t.classList.toggle('hide',!show);if(show)n++});document.querySelector('#count').textContent=n+' tasks shown'}[q,p,r].forEach(x=>x.addEventListener('input',filter));document.querySelector('#reset').onclick=()=>{q.value='';p.value='';r.value='';filter()};document.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{r.value=b.dataset.role;filter();document.querySelector('#tasks').scrollIntoView({behavior:'smooth'})});document.querySelector('#family').onchange=e=>document.querySelectorAll('[data-family]').forEach(row=>row.classList.toggle('hide',!!e.target.value&&row.dataset.family!==e.target.value));filter();"""
     page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Omarchy Community Maps</title><style>'+css+'</style></head><body>'+body+'<script>'+script+'</script></body></html>\n'
-    return {"docs/work-map.md":"\n".join(md)+"\n","tasks/README.md":"\n".join(index)+"\n","docs/support-matrix.md":"\n".join(matrix)+"\n","docs/contribution-map.html":page}
+    page=page.replace('<h2>Prove the devices</h2>', '<h2>Prove the devices</h2><p><a href="devices.html">Search exact models and their complete test history</a>. The matrix below groups recruitment candidates; use the model registry for device-specific evidence.</p>')
+    return {"docs/work-map.md":"\n".join(md)+"\n","tasks/README.md":"\n".join(index)+"\n","docs/support-matrix.md":"\n".join(matrix)+"\n","docs/contribution-map.html":page,
+            "docs/devices.html":devices.render_page(root,dt.datetime.fromisoformat(as_of+"T23:59:59+00:00"))}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--check",action="store_true");a=ap.parse_args()
     failed=[]

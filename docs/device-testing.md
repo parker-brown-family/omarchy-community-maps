@@ -1,5 +1,7 @@
 # Device qualification
 
+First [look up the exact model](device-registry.md) and create a configuration profile linked to its device record. Broad family candidates cannot receive physical observations. The [device tracker](devices.html) retains all configurations and test records.
+
 Record exact model, SoC/GPU, RAM/storage, OS image/kernel, display/input/scale, location provider, app revision/package hash, map/provider/pack version, network/permissions/power settings. Omit serials, SIM/account IDs and private addresses.
 
 1. Clean install/launch and visible attribution.

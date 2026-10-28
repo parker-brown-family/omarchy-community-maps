@@ -7,6 +7,7 @@ An independent community effort toward maps and directions across Omarchy deskto
 - [Contribution map](docs/contribution-map.html): download and open the interactive local page, or use the [Markdown work map](docs/work-map.md).
 - [Contribute](CONTRIBUTING.md) · [Agent entry point](AGENTS.md) · [Task packets](tasks/README.md).
 - [Can this work across all devices?](docs/feasibility.md) · [Support matrix](docs/support-matrix.md).
+- [Has anyone tested my exact device?](docs/devices.html) · [Add a model or test result](docs/device-registry.md). The model manifest is open-ended; placeholders and untested models carry no support claim.
 - [PR proof and security](docs/review.md) · [Governance](GOVERNANCE.md).
 
 ## Join the work
@@ -20,6 +21,8 @@ Python 3.11 or later; standard library only. From the repository root:
     python3 tools/validate.py
     python3 -m unittest discover -s tests -v
     python3 tools/render.py --check
+
+For an agent-readable lookup, run `python3 tools/devices.py --query "Pixel 7 Pro" --json`. Compare the returned model identifier, OS build and app revision before reusing a result. An empty result means no matching evidence here.
 
 Read unknown code before running it and use an isolated runner without credentials.
 

@@ -1,0 +1,40 @@
+{
+  "task": "DOC-01",
+  "base_revision": "1194ea31d62160ed44cfb3d401383d67979fa706",
+  "operator": "parker-brown-family",
+  "agent_tool": "Codex",
+  "model": null,
+  "cap_minutes": null,
+  "cap_cost": null,
+  "currency": null,
+  "elapsed_minutes": null,
+  "input_tokens": null,
+  "cached_tokens": null,
+  "output_tokens": null,
+  "cost": null,
+  "cost_kind": "unknown",
+  "cost_method": null,
+  "commands": [
+    "python3 tools/validate.py",
+    "python3 -m unittest discover -s tests -v",
+    "python3 tools/render.py --check",
+    "python3 tools/devices.py --query \"Mac17,3\" --json",
+    "git diff --check"
+  ],
+  "tests_not_run": [
+    "Physical device tests",
+    "390-pixel viewport (browser clamped to 500 CSS pixels)"
+  ],
+  "failures": [],
+  "artifacts": [
+    "docs/devices.html",
+    "docs/device-registry.md",
+    "data/devices.json"
+  ],
+  "limitations": [
+    "No app or hardware support claimed",
+    "Independent review and protected-branch merge pending",
+    "No billing/token measurement available",
+    "No hosted website deployment"
+  ]
+}
