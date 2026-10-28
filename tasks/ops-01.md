@@ -4,7 +4,7 @@ Task: OPS-01. Phase: P0. Track: governance. State: unclaimed.
 Owner and independent reviewer: unassigned.
 
 ## Purpose and acceptance
-Declare dates/caps/owners; measure attention, reproducibility, reviews, compute and service costs separately; publish continue/close.
+Declare the accepted pilot scope, contributor limits and operational owners; measure review backlog, reproducibility, compute and service costs separately. Open intake has no fixed global task-count, date or founder-attention cap. Stop unsafe or over-cap runs individually and publish prioritization decisions.
 
 ## Dependencies and roles
 Prerequisites: GOV-01, DATA-01.

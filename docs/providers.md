@@ -4,6 +4,12 @@ Donated agent runs pay for development compute, not tiles, geocoding, routing or
 
 DATA-01 compares a complete region workflow. For each service/pack, record: operator, dataset/code/style/font licenses, checked source URL, attribution, cache/prefetch/offline/distribution rights, coverage/language, freshness, usage units, quotas, price/currency, user/request assumptions, estimate/method, hard cap, outage/migration plan and privacy disclosure. MIT here does not relicense OpenStreetMap data. Review actual ODbL/distribution obligations and seek qualified advice when needed.
 
+## Starting Locally
+
+Small, compliant individual experiments can start without an institutional partnership. Use the chosen app's permitted downloads, bounded catalog requests and local fixtures. Record what was used and stop at the endpoint's limits. A future relationship through Omarchy may help wider operation; it is not a prerequisite for reading sources or lawful local tests. This does not grant bulk offline rights on public tile endpoints.
+
+The [regional MOTIS investigation](../tasks/service-01.md) compares an integrated service before adding separate search/routing stacks. The [Kelowna transit procedure](transit-pilot.md) names catalog-resolved feed URLs and failure cases. Places, Panoramax imagery and DriveBC road events are candidates, not selected production providers. DriveBC events are not observed traffic speeds.
+
 ## Public services
 The standard OSM tile endpoint prohibits bulk prefetch/offline packs and requires attribution, identifying requests and compliant caching. It is not a free pack backend.
 

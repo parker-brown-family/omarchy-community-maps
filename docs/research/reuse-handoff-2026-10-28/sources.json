@@ -1,0 +1,596 @@
+{
+  "schema": "omamaps-handoff-sources-v1",
+  "checked_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "S01",
+      "key": "repo",
+      "title": "Repository overview",
+      "url": "https://github.com/parker-brown-family/omarchy-community-maps",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Public master snapshot reviewed; no local checkout or implementation test. Resolve HEAD again before work."
+    },
+    {
+      "id": "S02",
+      "key": "workmap",
+      "title": "Existing work map",
+      "url": "https://github.com/parker-brown-family/omarchy-community-maps/blob/master/docs/work-map.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing P0\u2013P3 task identifiers and dependencies."
+    },
+    {
+      "id": "S03",
+      "key": "architecture",
+      "title": "Existing architecture",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/docs/architecture.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "APP-01 selects the engine; reuse and bounded contracts are existing decisions."
+    },
+    {
+      "id": "S04",
+      "key": "app-task",
+      "title": "APP-01 packet",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/tasks/app-01.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing-app comparison before a new client."
+    },
+    {
+      "id": "S05",
+      "key": "transit-task",
+      "title": "TRANSIT-01 packet",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/tasks/transit-01.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing transit assessment is P3 and depends on DATA-01."
+    },
+    {
+      "id": "S06",
+      "key": "providers",
+      "title": "Existing provider policy",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/docs/providers.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Licenses, offline rights, provenance, costs and safe pack lifecycle."
+    },
+    {
+      "id": "S07",
+      "key": "agents",
+      "title": "Agent entry point",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/AGENTS.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Scope, human authorization, evidence kinds and canonical JSON."
+    },
+    {
+      "id": "S08",
+      "key": "agent-contract",
+      "title": "Agent run contract",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/docs/agent-contract.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "One accepted task per PR; reviewer, cap and stop conditions."
+    },
+    {
+      "id": "S09",
+      "key": "tasks",
+      "title": "Canonical task registry",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/data/tasks.json",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Current task metadata; rebase proposed additions rather than replacing this file."
+    },
+    {
+      "id": "S10",
+      "key": "sources",
+      "title": "Existing source registry",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/data/sources.json",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing inspirations and provider-policy findings; retain these records."
+    },
+    {
+      "id": "S11",
+      "key": "render",
+      "title": "Board renderer",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/tools/render.py",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Generates contribution views from canonical data; current phase loop is P0\u2013P3."
+    },
+    {
+      "id": "S12",
+      "key": "validate",
+      "title": "Repository validator",
+      "url": "https://raw.githubusercontent.com/parker-brown-family/omarchy-community-maps/master/tools/validate.py",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Inspect constraints before extending data schemas or evidence."
+    },
+    {
+      "id": "S13",
+      "key": "comaps",
+      "title": "CoMaps official source mirror",
+      "url": "https://github.com/comaps/comaps",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Whole-app/offline baseline; primary development is on Codeberg. Apache-2.0 at project level, with NOTICE/data/component terms to inspect."
+    },
+    {
+      "id": "S14",
+      "key": "comaps-linux",
+      "title": "CoMaps Linux distribution listing",
+      "url": "https://flathub.org/en/apps/app.comaps.comaps",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Listing explicitly warns that Linux does not yet match mobile feature parity; not an Omarchy qualification result."
+    },
+    {
+      "id": "S15",
+      "key": "comaps-contributing",
+      "title": "CoMaps contribution guide",
+      "url": "https://raw.githubusercontent.com/comaps/comaps/main/docs/CONTRIBUTING.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Links upstream AI-usage policy; obtain and respect the current policy before contributions."
+    },
+    {
+      "id": "S16",
+      "key": "comaps-ai",
+      "title": "CoMaps AI-usage policy target",
+      "url": "https://codeberg.org/comaps/Governance/src/branch/main/AI_USAGE.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "linked_but_not_retrieved",
+      "note": "Linked by upstream contribution guide, but policy body was inaccessible in this research session. Do not infer permission."
+    },
+    {
+      "id": "S17",
+      "key": "gnome",
+      "title": "GNOME Maps",
+      "url": "https://apps.gnome.org/Maps/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Desktop planning baseline based on OpenStreetMap."
+    },
+    {
+      "id": "S18",
+      "key": "gnome-transit",
+      "title": "GNOME developer announcement of Transitous integration",
+      "url": "https://discourse.gnome.org/t/163-public-transit/23035",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Historical primary announcement from 2024; demonstrates prior integration, not current region coverage. Verify installed version."
+    },
+    {
+      "id": "S19",
+      "key": "organic",
+      "title": "Organic Maps",
+      "url": "https://github.com/organicmaps/organicmaps",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Alternative whole-app/offline navigation reference; do not build a second fork by default."
+    },
+    {
+      "id": "S20",
+      "key": "maplibre-js",
+      "title": "MapLibre GL JS",
+      "url": "https://github.com/maplibre/maplibre-gl-js",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Browser vector-map renderer; not search, routing or navigation."
+    },
+    {
+      "id": "S21",
+      "key": "maplibre-native",
+      "title": "MapLibre Native",
+      "url": "https://github.com/maplibre/maplibre-native",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Native rendering family; platform integration must be qualified."
+    },
+    {
+      "id": "S22",
+      "key": "maplibre-qt",
+      "title": "MapLibre Native Qt",
+      "url": "https://github.com/maplibre/maplibre-native-qt",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Qt bindings and Qt Location plugin; candidate for a justified native surface."
+    },
+    {
+      "id": "S23",
+      "key": "motis",
+      "title": "MOTIS",
+      "url": "https://github.com/motis-project/motis",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Multimodal routing, geocoding and tiles; REST/OpenAPI. Human-facing upstream communication must be human-written."
+    },
+    {
+      "id": "S24",
+      "key": "motis-setup",
+      "title": "MOTIS configuration and realtime inputs",
+      "url": "https://github.com/motis-project/motis/blob/master/docs/setup.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "OSM plus timetable inputs, realtime and GBFS configuration; pin the release before implementing."
+    },
+    {
+      "id": "S25",
+      "key": "otp",
+      "title": "OpenTripPlanner",
+      "url": "https://github.com/opentripplanner/OpenTripPlanner",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "OTP2 server uses GTFS/OSM and realtime updates, exposes GraphQL; JVM deployment and LGPL-3.0 license need release-specific review."
+    },
+    {
+      "id": "S26",
+      "key": "valhalla",
+      "title": "Valhalla",
+      "url": "https://github.com/valhalla/valhalla",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "MIT routing engine with tiled graph architecture; test route profiles, instructions and device resource requirements."
+    },
+    {
+      "id": "S27",
+      "key": "photon",
+      "title": "Photon",
+      "url": "https://github.com/komoot/photon",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Apache-2.0 geocoder with typeahead, multilingual search and reverse geocoding; data and import dependencies remain separate."
+    },
+    {
+      "id": "S28",
+      "key": "pelias",
+      "title": "Pelias data-source architecture",
+      "url": "https://github.com/pelias/documentation/blob/master/data-sources.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Alternative multi-source geocoder; do not assume every new dataset has a maintained importer."
+    },
+    {
+      "id": "S29",
+      "key": "pelias-runtime",
+      "title": "Pelias runtime requirements",
+      "url": "https://github.com/pelias/documentation/blob/master/requirements.md",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Search backend/version requirements matter; review bundled dependency licenses and operational costs."
+    },
+    {
+      "id": "S30",
+      "key": "protomaps",
+      "title": "Protomaps basemaps",
+      "url": "https://github.com/protomaps/basemaps",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Basemap generation plus matching cartographic styles; preserve tile-schema/style compatibility."
+    },
+    {
+      "id": "S31",
+      "key": "planetiler",
+      "title": "Planetiler",
+      "url": "https://github.com/onthegomap/planetiler",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Build tool for vector tiles, including PMTiles output; build infrastructure is not a phone runtime."
+    },
+    {
+      "id": "S32",
+      "key": "pmtiles",
+      "title": "PMTiles concepts",
+      "url": "https://docs.protomaps.com/pmtiles/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Tile archive accessed with byte ranges; read-only format, not a search index or route graph."
+    },
+    {
+      "id": "S33",
+      "key": "pmtiles-maplibre",
+      "title": "PMTiles MapLibre GL integration",
+      "url": "https://docs.protomaps.com/pmtiles/maplibre",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Documented GL JS protocol integration; do not assume identical Native/Qt support."
+    },
+    {
+      "id": "S34",
+      "key": "osm-license",
+      "title": "OpenStreetMap copyright and license",
+      "url": "https://www.openstreetmap.org/copyright",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "OSM data is ODbL, independent of application code licensing."
+    },
+    {
+      "id": "S35",
+      "key": "osm-tiles",
+      "title": "OSMF tile-server policy",
+      "url": "https://operations.osmfoundation.org/policies/tiles/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Standard public tile service is not a bulk/offline-download backend."
+    },
+    {
+      "id": "S36",
+      "key": "nominatim-policy",
+      "title": "Public Nominatim policy",
+      "url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Public endpoint: application-wide maximum 1 request/second and no client autocomplete; self-hosted software is a different case."
+    },
+    {
+      "id": "S37",
+      "key": "geofabrik",
+      "title": "Geofabrik British Columbia extract",
+      "url": "https://download.geofabrik.de/north-america/canada/british-columbia.html",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "OSM PBF input and update files. Source version and acquired digest must be pinned."
+    },
+    {
+      "id": "S38",
+      "key": "bct",
+      "title": "BC Transit open-data catalog",
+      "url": "https://www.bctransit.com/open-data/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Kelowna links static GTFS plus alerts, trip updates and vehicle positions. Binary bodies were not decoded in this session."
+    },
+    {
+      "id": "S39",
+      "key": "bct-terms",
+      "title": "BC Transit data terms",
+      "url": "https://www.bctransit.com/open-data/terms-of-use/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Limited, revocable license with attribution and other conditions; not equivalent to unrestricted public-domain data."
+    },
+    {
+      "id": "S40",
+      "key": "gtfs",
+      "title": "GTFS Schedule specification",
+      "url": "https://gtfs.org/documentation/schedule/reference/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Canonical timetable specification; service dates, times and supported optional features must be respected."
+    },
+    {
+      "id": "S41",
+      "key": "gtfs-rt",
+      "title": "GTFS Realtime specification",
+      "url": "https://gtfs.org/documentation/realtime/reference/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Trip updates, vehicle positions and service alerts have distinct semantics."
+    },
+    {
+      "id": "S42",
+      "key": "gtfs-validator",
+      "title": "MobilityData GTFS validator",
+      "url": "https://github.com/MobilityData/gtfs-validator",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Apache-2.0 static-feed validator; validation alone is not a successful itinerary or realtime test."
+    },
+    {
+      "id": "S43",
+      "key": "mobilitydb",
+      "title": "Mobility Database",
+      "url": "https://mobilitydatabase.org/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Discovery catalog for GTFS, GTFS-RT and GBFS; individual feed terms still apply."
+    },
+    {
+      "id": "S44",
+      "key": "transitous",
+      "title": "Transitous API policy",
+      "url": "https://transitous.org/api/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Optional community-operated MOTIS service with eligibility, identification, attribution and usage limits; not a mandatory default."
+    },
+    {
+      "id": "S45",
+      "key": "gbfs",
+      "title": "General Bikeshare Feed Specification",
+      "url": "https://gbfs.org/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Shared-mobility availability standard; discovery is distinct from booking/payment."
+    },
+    {
+      "id": "S46",
+      "key": "overture",
+      "title": "Overture Places guide",
+      "url": "https://docs.overturemaps.org/guides/places/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Business/place data with source-dependent provenance and licensing; not a review corpus."
+    },
+    {
+      "id": "S47",
+      "key": "overture-license",
+      "title": "Overture attribution and licensing",
+      "url": "https://docs.overturemaps.org/attribution/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Theme and source-specific licenses; do not label all Overture data CC0 or one blanket license."
+    },
+    {
+      "id": "S48",
+      "key": "alltheplaces",
+      "title": "AllThePlaces",
+      "url": "https://github.com/alltheplaces/alltheplaces",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing location-data extraction project; assess published data and provenance before launching new crawlers."
+    },
+    {
+      "id": "S49",
+      "key": "panoramax",
+      "title": "Panoramax integration",
+      "url": "https://docs.panoramax.fr/how-to-contribute/use-panoramax/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Open street imagery API using OGC/STAC; viewer and images have separate terms."
+    },
+    {
+      "id": "S50",
+      "key": "panoramax-host",
+      "title": "Panoramax self-hosting",
+      "url": "https://docs.panoramax.fr/how-to-contribute/hosting-instance/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Federated/self-hostable imagery infrastructure; does not provide uniform worldwide photographic coverage."
+    },
+    {
+      "id": "S51",
+      "key": "panoramax-license",
+      "title": "Panoramax federation requirements",
+      "url": "https://docs.panoramax.fr/federated-catalog/",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Imagery/metadata licensing and anonymization requirements; check the actual instance and image."
+    },
+    {
+      "id": "S52",
+      "key": "drivebc",
+      "title": "DriveBC Open511 API",
+      "url": "https://api.open511.gov.bc.ca/help",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Documented road events under OGL-BC and API terms. Event overlays are not live network-wide speed data."
+    },
+    {
+      "id": "S53",
+      "key": "geoclue",
+      "title": "GeoClue Location interface",
+      "url": "https://www.freedesktop.org/software/geoclue/docs/gdbus-org.freedesktop.GeoClue2.Location.html",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Timestamp can be receipt time, cached or non-monotonic; do not invent measurement provenance."
+    },
+    {
+      "id": "S54",
+      "key": "geoclue-client",
+      "title": "GeoClue Client interface",
+      "url": "https://www.freedesktop.org/software/geoclue/docs/gdbus-org.freedesktop.GeoClue2.Client.html",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Application identity, permissions, provider state and updates need integration."
+    },
+    {
+      "id": "S55",
+      "key": "android",
+      "title": "Android LocationManager",
+      "url": "https://developer.android.com/reference/android/location/LocationManager",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Platform location API candidate; separately review target SDK, permissions and background lifecycle."
+    },
+    {
+      "id": "S56",
+      "key": "streetcomplete",
+      "title": "StreetComplete",
+      "url": "https://github.com/streetcomplete/StreetComplete",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Existing OSM contribution workflow to learn from or hand off to; no automated edits authorized."
+    },
+    {
+      "id": "S57",
+      "key": "sentinel",
+      "title": "Copernicus Sentinel-2",
+      "url": "https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Satellite imagery candidate for later layers; not equivalent to street-level or high-resolution aerial coverage."
+    },
+    {
+      "id": "S58",
+      "key": "omamesh",
+      "title": "Omamesh",
+      "url": "https://github.com/clartek/omamesh",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "MeshCore messaging/advertised-contact map integration. Current README names Esri/OSM online basemaps and an offline coordinate grid; reuse transport/normalization separately from map-provider choices."
+    },
+    {
+      "id": "S59",
+      "key": "omastorm",
+      "title": "Omastorm",
+      "url": "https://github.com/wesleygrimes/omastorm",
+      "checked_on": "2026-10-28",
+      "evidence_kind": "primary_documentation",
+      "status": "reviewed",
+      "note": "Rust/Quickshell weather-radar integration; observation timestamps, stale states and provider coverage. Do not infer Canada-wide radar, forecasts, warnings or GNSS from the app."
+    }
+  ]
+}

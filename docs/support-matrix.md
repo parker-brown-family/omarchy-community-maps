@@ -1,6 +1,6 @@
 # Support matrix
 
-Snapshot: 2026-10-27. Families are candidates. Verification belongs to exact hardware/OS/revision; see evidence records.
+Snapshot: 2026-10-28. Families are candidates. Verification belongs to exact hardware/OS/revision; see evidence records.
 
 | Candidate | Family / lane / architecture | Evidence | Blocker |
 |---|---|---|---|

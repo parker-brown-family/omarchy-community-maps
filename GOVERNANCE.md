@@ -17,4 +17,8 @@ A personal repository cannot provide organization team isolation. Before scale o
 Record options with evidence. Domain maintainer plus independent reviewer selects the approach. Security/data objections hold the change until resolved. No bot approval or auto-merge. Stop publication and revoke exposed credentials during incidents; record all temporary settings changes with before/after evidence.
 
 ## Pilot
-Starts after stewards/reviewers and a provider operator accept. Proposed limits: fourteen days, two active agent tasks, thirty minutes/week founder attention. Measure actual results and close if limits fail. These are hypotheses, not forecasts.
+Open intake has no fixed two-task, fourteen-day or founder-attention limit. Parker explicitly accepts a potentially large contribution queue. Each contributor still owns their time/compute cap; no intake decision commits project funds.
+
+Agents inspect contributions and recommend including them, dismantling them for useful parts, rebuilding from a bounded specification, or rejecting them with evidence. They cannot bypass branch rules, grant approval, appoint maintainers or self-certify. Integration still requires the independent human reviews above.
+
+Read-only source research and local fixtures can proceed while operational roles are being recruited. A hosted service, release or support claim waits for its actual operator, rights, security and evidence prerequisites. Measure review backlog and time so the custodian can prioritize; a growing queue alone does not close intake.

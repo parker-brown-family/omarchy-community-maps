@@ -36,3 +36,19 @@ Canonical registry: data/tasks.json. One task, one PR; claim requires maintainer
 - [TRANSIT-01 — Assess transit and live data](transit-01.md) · [issue](https://github.com/parker-brown-family/omarchy-community-maps/issues/32)
 - [DOC-01 — Verify contributor onboarding](doc-01.md) · [issue](https://github.com/parker-brown-family/omarchy-community-maps/issues/33)
 - [DOC-02 — Translate and test user workflows](doc-02.md) · [issue](https://github.com/parker-brown-family/omarchy-community-maps/issues/34)
+- [ROADMAP-01 — Publish reuse-first architecture and lane map](roadmap-01.md) · issue unlinked
+- [SERVICE-01 — Compare a regional MOTIS service with justified alternatives](service-01.md) · issue unlinked
+- [TILE-01 — Produce a self-controlled regional display pack](tile-01.md) · issue unlinked
+- [SEARCH-01 — Benchmark regional place and address search](search-01.md) · issue unlinked
+- [TRANSIT-02 — Plan scheduled regional transit](transit-02.md) · issue unlinked
+- [TRANSIT-03 — Apply and expire realtime transit](transit-03.md) · issue unlinked
+- [PLACE-01 — Add provenance-aware place enrichment](place-01.md) · issue unlinked
+- [INCIDENT-01 — Show expiry-aware road events](incident-01.md) · issue unlinked
+- [TRAFFIC-01 — Establish lawful traffic inputs and ETA evaluation](traffic-01.md) · issue unlinked
+- [IMAGERY-01 — Integrate a licensed street-imagery panel](imagery-01.md) · issue unlinked
+- [COMMUNITY-01 — Separate corrections, shared places and reviews](community-01.md) · issue unlinked
+- [SYNC-01 — Design private saved places and portable trip handoff](sync-01.md) · issue unlinked
+- [ACCESS-01 — Validate physical-accessibility data and route semantics](access-01.md) · issue unlinked
+- [TERRAIN-01 — Scope satellite and terrain layers](terrain-01.md) · issue unlinked
+- [OPS-02 — Measure region build and distribution costs](ops-02.md) · issue unlinked
+- [COVERAGE-01 — Add a second independent region](coverage-01.md) · issue unlinked

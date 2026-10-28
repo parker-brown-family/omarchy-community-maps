@@ -1,6 +1,6 @@
 # Contributing
 
-Pick a task from [the work map](docs/work-map.md). Offer your role, hardware, output and available time/compute through its issue. A maintainer accepts scope and reviewer capacity before assigning work. An open task is not permission to spend project funds or change somebody's device.
+Pick a task from [the work map](docs/work-map.md). Offer your role, hardware, output and available time/compute through its issue. A maintainer accepts scope before assigning implementation. Source research and proposed packets are welcome while reviewers are being recruited; that does not grant a merge or spending right. An open task is not permission to spend project funds or change somebody's device.
 
 ## Contribution cycle
 1. Read dependencies/current upstream and run the task's invalidation check.
@@ -19,4 +19,4 @@ Contributors use their own accounts and caps. Unknown tokens/cost are null. Neve
 ## Rights and conduct
 You confirm you may contribute the material under MIT, preserving third-party notices. Record origin/license for copied code or assets; map data/service terms are separate. AI output still needs provenance review. No AI author/contributor/co-author credit.
 
-Discuss evidence respectfully. No harassment, doxxing, mass mentions or automated issue floods. Maintainers may pause intake when review capacity is exhausted. Request a private channel through the owner's GitHub profile for conduct concerns; do not post personal data.
+Discuss evidence respectfully. No harassment, doxxing, mass mentions or automated issue floods. Intake has no fixed concurrency cap. Maintainers prioritize the review queue; unsafe or incomplete submissions can wait for evidence without closing unrelated research. Request a private channel through the owner's GitHub profile for conduct concerns; do not post personal data.

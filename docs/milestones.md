@@ -1,10 +1,10 @@
 # Milestones
 
-| Phase | Product proof | Community requirement |
+| Phase | Delivery proof | Research that can overlap |
 |---|---|---|
-| P0 desktop | Install/search/manual walking route/missing-location recovery repeated | Stewards, reviewers, provider plan, capped pilot |
-| P1 planning portability | Exact x86/ARM/touch/Android, separate offline capabilities, handoff | Domain owners and packaging |
-| P2 navigation | Outdoor recovery, screen-off audio and power on exact hardware | Operators, reviewers, release custodian |
-| P3 coverage | Cycling/driving/transit/live data and regional quality | Sustainable feeds and support |
+| P0 foundation | One packaged desktop trip repeated independently; clear application choice | Regional MOTIS investigation, transit catalog, places, imagery, traffic-source and accessibility research |
+| P1 regional planning | Offline display/search/route, deliberate handoff, qualified platform adapters; scheduled/realtime transit where evidenced | Next-region sources and richer data layers |
+| P2 guidance and expansion | Outdoor recovery, screen-off audio/power on exact hardware; independently sourced next region | Wider product depth and geographic coverage |
+| P3 broader road coverage | Cycling/driving qualification, traffic and regional quality where supported | Continued source discovery, data freshness and maintenance |
 
-All families are represented now. Evidence expands qualification, not calendar promises. Independent contracts/fixtures can proceed in parallel; application work waits for provider/engine decisions. Desktop is the first complete vertical slice.
+Phases organize delivery. They do not forbid read-only research in a later capability. The [product roadmap](roadmap.md) adds service/data lanes alongside platform qualification. Existing task identities remain stable; no calendar, geographic or device-wide support promise is implied.
