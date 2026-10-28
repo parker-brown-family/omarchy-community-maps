@@ -17,7 +17,7 @@ SECRET = re.compile(r"(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}
 REQUIRED = ["README.md", "AGENTS.md", "CONTRIBUTING.md", "GOVERNANCE.md", "SECURITY.md", "LICENSE", ".github/CODEOWNERS",
             ".github/workflows/policy.yml", ".github/workflows/checks.yml",
             "tools/validate.py", "tools/trusted_policy.py", "tools/render.py",
-            "data/roles.json", "data/platforms.json", "data/capabilities.json", "data/tasks.json", "data/sources.json"]
+            "data/roles.json", "data/platforms.json", "data/capabilities.json", "data/tasks.json", "data/sources.json", "data/devices.json"]
 
 class Invalid(ValueError):
     pass
@@ -120,11 +120,16 @@ def validate_evidence(e, profiles, capabilities, now=None):
     if e["kind"] == "physical":
         text(e["hardware"], "hardware")
         text(e["os_build"], "os_build")
+        profile = profiles[e["profile"]]
+        need(profile.get("device_id") is not None, "physical evidence needs an exact device link")
+        need(profile.get("hardware") == e["hardware"] and profile.get("os_build") == e["os_build"],
+             "physical evidence must match its hardware/OS configuration")
     if e["status"] == "verified":
         need(e["kind"] == "physical", "only physical observation certifies device support")
         profile = profiles[e["profile"]]
         need(profile.get("hardware") == e["hardware"] and profile.get("os_build") == e["os_build"],
              "verified evidence needs an exact matching hardware/OS profile, not a candidate group")
+        text((profile.get("configuration") or {}).get("model_identifier"), "verified model identifier")
         person(e["reviewer"], "reviewer", False)
         need(e["operator"].lower() != e["reviewer"].lower(), "reviewer must be independent")
         expiry = timestamp(e["expires_at"], "expires_at")
@@ -155,6 +160,49 @@ def validate_receipt(r, tasks):
     person(r["operator"], "operator")
     for k in ("commands","tests_not_run","failures","artifacts","limitations"):
         sequence(r[k], k)
+
+CONFIGURATION_FIELDS = ("model_identifier", "soc", "gpu", "ram_gib", "storage_gib", "kernel",
+                        "firmware", "browser", "location_provider", "power_settings")
+
+def validate_devices(devices, profiles):
+    known_identifiers = set()
+    for d in devices.values():
+        fields(d, ["family", "manufacturer", "model", "identity", "aliases", "model_identifiers",
+                   "soc", "sources", "notes"], "device")
+        need(d["family"] in ("desktop", "laptop", "tablet", "phone"), "invalid device family")
+        need(d["identity"] in ("model", "placeholder"), "invalid device identity")
+        for key in ("model", "notes"): text(d[key], key)
+        for key in ("manufacturer", "soc"):
+            if d[key] is not None: text(d[key], key)
+        for key in ("aliases", "model_identifiers", "sources"):
+            for item in sequence(d[key], key): text(item, key)
+        need(all(u.startswith("https://") for u in d["sources"]), "device sources require HTTPS")
+        if d["identity"] == "placeholder":
+            need(not d["model_identifiers"], "placeholder cannot assert a model identifier")
+        for ident in d["model_identifiers"]:
+            key = (d["manufacturer"], ident.casefold())
+            need(key not in known_identifiers, "model identifier belongs to multiple devices")
+            known_identifiers.add(key)
+    for p in profiles.values():
+        fields(p, ["device_id", "configuration"], "platform")
+        if p["device_id"] is None:
+            need(p["configuration"] is None, "broad candidate cannot carry an exact configuration")
+            continue
+        need(p["device_id"] in devices, "unknown device reference")
+        d = devices[p["device_id"]]
+        need(d["identity"] == "model", "placeholder cannot be a tested configuration")
+        need(p["family"] == d["family"], "configuration family differs from device")
+        fields(p["configuration"], CONFIGURATION_FIELDS, "configuration")
+        for key in CONFIGURATION_FIELDS:
+            value = p["configuration"][key]
+            if value is None: continue
+            if key in ("ram_gib", "storage_gib"):
+                need(isinstance(value, (int, float)) and not isinstance(value, bool) and
+                     math.isfinite(value) and value > 0, key + " must be positive or null")
+            else: text(value, key)
+        ident = p["configuration"]["model_identifier"]
+        if ident is not None and d["model_identifiers"]:
+            need(ident in d["model_identifiers"], "configuration model identifier differs from device")
 
 def validate(root):
     root = Path(root)
@@ -187,7 +235,8 @@ def validate(root):
     for name in REQUIRED:
         need((root/name).is_file(), "required file missing: " + name)
     reg = {name: index(read_json(root/"data"/(name+".json")), name)
-           for name in ("roles","platforms","capabilities","tasks","sources")}
+           for name in ("roles","platforms","capabilities","tasks","sources","devices")}
+    validate_devices(reg["devices"], reg["platforms"])
     for r in reg["roles"].values():
         fields(r,["name","responsibility","authority","who","maintainers","status"],"role")
         for k in ("name","responsibility","authority","who"):text(r[k],k)
@@ -242,7 +291,7 @@ def validate(root):
         need(e["id"] not in seen,"duplicate evidence id");seen.add(e["id"])
     for p in (root/"receipts").glob("*.json"):
         validate_receipt(read_json(p),reg["tasks"])
-    return dict(files=len(paths),tasks=len(reg["tasks"]),profiles=len(reg["platforms"]),
+    return dict(files=len(paths),tasks=len(reg["tasks"]),profiles=len(reg["platforms"]),devices=len(reg["devices"]),
                 capabilities=len(reg["capabilities"]),evidence=len(seen))
 
 def main():

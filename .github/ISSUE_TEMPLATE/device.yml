@@ -3,6 +3,20 @@ description: Report one capability on exact hardware; failures welcome.
 title: "[Evidence] "
 labels: ["device-evidence"]
 body:
+  - type: input
+    id: registry
+    attributes:
+      label: Device registry entry or new exact model
+      description: Search docs/devices.html or tools/devices.py first. Give the device ID, model identifier and regional variant; say new model if absent. Never include a serial or IMEI.
+    validations:
+      required: true
+  - type: textarea
+    id: previous
+    attributes:
+      label: Earlier tests and configuration differences
+      description: Link any matching records. State whether the OS lane, OS build, hardware variant and app revision match. An absent record means untested here.
+    validations:
+      required: true
   - type: textarea
     id: environment
     attributes:

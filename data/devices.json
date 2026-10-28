@@ -1,0 +1,300 @@
+[
+  {
+    "id": "apple-iphone-13",
+    "family": "phone",
+    "manufacturer": "Apple",
+    "model": "iPhone 13",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://support.apple.com/en-us/108044"
+    ],
+    "notes": "Base model only. Pro, Pro Max, Plus, mini and regional identifiers need their own matching entries or explicit configuration. Browser access is a candidate path; native Omarchy installation is unproved."
+  },
+  {
+    "id": "apple-iphone-14",
+    "family": "phone",
+    "manufacturer": "Apple",
+    "model": "iPhone 14",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://support.apple.com/en-us/108044"
+    ],
+    "notes": "Base model only. Pro, Pro Max, Plus, mini and regional identifiers need their own matching entries or explicit configuration. Browser access is a candidate path; native Omarchy installation is unproved."
+  },
+  {
+    "id": "apple-iphone-15",
+    "family": "phone",
+    "manufacturer": "Apple",
+    "model": "iPhone 15",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://support.apple.com/en-us/108044"
+    ],
+    "notes": "Base model only. Pro, Pro Max, Plus, mini and regional identifiers need their own matching entries or explicit configuration. Browser access is a candidate path; native Omarchy installation is unproved."
+  },
+  {
+    "id": "apple-iphone-16",
+    "family": "phone",
+    "manufacturer": "Apple",
+    "model": "iPhone 16",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://support.apple.com/en-us/108044"
+    ],
+    "notes": "Base model only. Pro, Pro Max, Plus, mini and regional identifiers need their own matching entries or explicit configuration. Browser access is a candidate path; native Omarchy installation is unproved."
+  },
+  {
+    "id": "apple-macbook-air-m4-13",
+    "family": "laptop",
+    "manufacturer": "Apple",
+    "model": "MacBook Air 13-inch M4",
+    "identity": "model",
+    "aliases": [
+      "M4 Air 13"
+    ],
+    "model_identifiers": [
+      "Mac16,12"
+    ],
+    "soc": "M4",
+    "sources": [
+      "https://support.apple.com/en-us/102869"
+    ],
+    "notes": "A product identity source does not establish Linux, Omarchy or map support."
+  },
+  {
+    "id": "apple-macbook-air-m4-15",
+    "family": "laptop",
+    "manufacturer": "Apple",
+    "model": "MacBook Air 15-inch M4",
+    "identity": "model",
+    "aliases": [
+      "M4 Air 15"
+    ],
+    "model_identifiers": [
+      "Mac16,13"
+    ],
+    "soc": "M4",
+    "sources": [
+      "https://support.apple.com/en-us/102869"
+    ],
+    "notes": "A product identity source does not establish Linux, Omarchy or map support."
+  },
+  {
+    "id": "apple-macbook-air-m5-13",
+    "family": "laptop",
+    "manufacturer": "Apple",
+    "model": "MacBook Air 13-inch M5",
+    "identity": "model",
+    "aliases": [
+      "M5 Air 13"
+    ],
+    "model_identifiers": [
+      "Mac17,3"
+    ],
+    "soc": "M5",
+    "sources": [
+      "https://support.apple.com/en-us/102869"
+    ],
+    "notes": "A product identity source does not establish Linux, Omarchy or map support."
+  },
+  {
+    "id": "apple-macbook-air-m5-15",
+    "family": "laptop",
+    "manufacturer": "Apple",
+    "model": "MacBook Air 15-inch M5",
+    "identity": "model",
+    "aliases": [
+      "M5 Air 15"
+    ],
+    "model_identifiers": [
+      "Mac17,4"
+    ],
+    "soc": "M5",
+    "sources": [
+      "https://support.apple.com/en-us/102869"
+    ],
+    "notes": "A product identity source does not establish Linux, Omarchy or map support."
+  },
+  {
+    "id": "apple-macbook-air-m6-watchlist",
+    "family": "laptop",
+    "manufacturer": "Apple",
+    "model": "MacBook Air M6 \u2014 model unconfirmed",
+    "identity": "placeholder",
+    "aliases": [
+      "M6 Air"
+    ],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Requested future-generation watchlist. Exact product, size, identifiers and OS support have not been established here."
+  },
+  {
+    "id": "google-pixel-6-pro",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel 6 Pro",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "google-pixel-7-pro",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel 7 Pro",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "google-pixel-7a",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel 7a",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "google-pixel-8-pro",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel 8 Pro",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "google-pixel-9a",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel 9a",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "google-pixel-fold",
+    "family": "phone",
+    "manufacturer": "Google",
+    "model": "Pixel Fold",
+    "identity": "model",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [
+      "https://github.com/derekross/omarchy-mobile"
+    ],
+    "notes": "Candidate from the upstream device work. Record Linux, Android, guest and browser configurations separately; upstream work does not certify this application."
+  },
+  {
+    "id": "x86-tablet-example",
+    "family": "tablet",
+    "manufacturer": null,
+    "model": "x86 tablet \u2014 identify your exact model",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  },
+  {
+    "id": "arm-tablet-example",
+    "family": "tablet",
+    "manufacturer": null,
+    "model": "ARM tablet \u2014 identify your exact model",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  },
+  {
+    "id": "android-tablet-example",
+    "family": "tablet",
+    "manufacturer": null,
+    "model": "Android tablet \u2014 identify your exact model",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  },
+  {
+    "id": "intel-desktop-example",
+    "family": "desktop",
+    "manufacturer": null,
+    "model": "Intel desktop \u2014 identify board, CPU and GPU",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  },
+  {
+    "id": "amd-desktop-example",
+    "family": "desktop",
+    "manufacturer": null,
+    "model": "AMD desktop \u2014 identify board, CPU and GPU",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  },
+  {
+    "id": "apple-desktop-example",
+    "family": "desktop",
+    "manufacturer": null,
+    "model": "Apple Silicon desktop \u2014 identify your exact model",
+    "identity": "placeholder",
+    "aliases": [],
+    "model_identifiers": [],
+    "soc": null,
+    "sources": [],
+    "notes": "Scaffold only. Add a real model record before recording physical tests. Custom systems need board/revision, CPU and GPU identity."
+  }
+]

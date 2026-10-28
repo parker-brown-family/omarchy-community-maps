@@ -1,0 +1,25 @@
+{
+  "id": "replace-exact-configuration",
+  "device_id": "google-pixel-7-pro",
+  "family": "phone",
+  "os_lane": "linux-native",
+  "arch": "aarch64",
+  "hardware_candidate": "Pixel 7 Pro \u2014 exact configuration pending",
+  "hardware": null,
+  "os_build": null,
+  "owner": null,
+  "status": "candidate",
+  "blocker": "Template only; no test performed.",
+  "configuration": {
+    "model_identifier": null,
+    "soc": null,
+    "gpu": null,
+    "ram_gib": null,
+    "storage_gib": null,
+    "kernel": null,
+    "firmware": null,
+    "browser": null,
+    "location_provider": null,
+    "power_settings": null
+  }
+}

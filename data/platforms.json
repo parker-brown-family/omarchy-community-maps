@@ -9,7 +9,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "GeoClue provider may be absent; test without GNSS."
+    "blocker": "GeoClue provider may be absent; test without GNSS.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "desktop-amd",
@@ -21,7 +23,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Qualify rendering and packaging."
+    "blocker": "Qualify rendering and packaging.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "desktop-nvidia",
@@ -33,7 +37,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Driver/Wayland path needs separate test."
+    "blocker": "Driver/Wayland path needs separate test.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "laptop-intel",
@@ -45,7 +51,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Wi-Fi positioning, suspend and scaling vary."
+    "blocker": "Wi-Fi positioning, suspend and scaling vary.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "laptop-amd",
@@ -57,7 +65,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Measure power and resume."
+    "blocker": "Measure power and resume.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "apple-m1-m2",
@@ -69,7 +79,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Upstream OS support is not app certification."
+    "blocker": "Upstream OS support is not app certification.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "apple-desktop",
@@ -81,7 +93,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Exact model/GPU/OS; no automatic GNSS."
+    "blocker": "Exact model/GPU/OS; no automatic GNSS.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "snapdragon-laptop",
@@ -93,7 +107,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Kernel/firmware/graphics are model-specific."
+    "blocker": "Kernel/firmware/graphics are model-specific.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "tablet-x86",
@@ -105,7 +121,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Touch, keyboard, rotation, sleep."
+    "blocker": "Touch, keyboard, rotation, sleep.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "tablet-arm",
@@ -117,7 +135,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Upstream drivers and location prerequisites."
+    "blocker": "Upstream drivers and location prerequisites.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "tablet-android",
@@ -129,7 +149,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "OS and vendor power policy."
+    "blocker": "OS and vendor power policy.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "pixel7pro-linux",
@@ -141,7 +163,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "GNSS reports exist; app outdoor/sleep qualification open."
+    "blocker": "GNSS reports exist; app outdoor/sleep qualification open.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "pixel-other-linux",
@@ -153,7 +177,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Split each handset before certification."
+    "blocker": "Split each handset before certification.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "oneplus-linux",
@@ -165,7 +191,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Audit upstream bring-up/location/suspend."
+    "blocker": "Audit upstream bring-up/location/suspend.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "phonechy",
@@ -177,7 +205,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Verify model, OS, source license and location API."
+    "blocker": "Verify model, OS, source license and location API.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "other-linux-phone",
@@ -189,7 +219,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Kernel/firmware support belongs upstream."
+    "blocker": "Kernel/firmware support belongs upstream.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "pixel-android",
@@ -201,7 +233,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Different OS lane from native Omarchy Mobile."
+    "blocker": "Different OS lane from native Omarchy Mobile.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "android-other",
@@ -213,7 +247,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Exact models required; no assumed Google services."
+    "blocker": "Exact models required; no assumed Google services.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "android-guest",
@@ -225,7 +261,9 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Explicit host GPS/lifecycle bridge or native handoff."
+    "blocker": "Explicit host GPS/lifecycle bridge or native handoff.",
+    "device_id": null,
+    "configuration": null
   },
   {
     "id": "web-fallback",
@@ -237,6 +275,8 @@
     "os_build": null,
     "owner": null,
     "status": "candidate",
-    "blocker": "Foreground planning; storage/background constraints."
+    "blocker": "Foreground planning; storage/background constraints.",
+    "device_id": null,
+    "configuration": null
   }
 ]
