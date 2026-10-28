@@ -6,6 +6,9 @@
         "P3",
         "P0"
       ]
+    },
+    "DATA-01": {
+      "scope": "original paths retained; maintainer-directed documentation scope appended"
     }
   },
   "new_unclaimed_packets": 16,

@@ -1,5 +1,5 @@
 {
-  "task": "ROADMAP-01",
+  "task": "DATA-01",
   "base_revision": "1194ea31d62160ed44cfb3d401383d67979fa706",
   "operator": "parker-brown-family",
   "agent_tool": "Codex",
@@ -28,7 +28,8 @@
     "Physical navigation and device qualification"
   ],
   "failures": [
-    "Full staged whitespace check reports three original Markdown hard breaks and one EOF blank line in the byte-preserved source archive. Authored paths pass; source bytes and whitespace policy retained."
+    "Full staged whitespace check reports three original Markdown hard breaks and one EOF blank line in the byte-preserved source archive. Authored paths pass; source bytes and whitespace policy retained.",
+    "Initial protected-base CI rejected Task: ROADMAP-01 because new tasks are not trusted until merged. Corrected the current source-discovery submission to existing DATA-01 and recorded its maintainer-directed documentation scope; no policy changes."
   ],
   "artifacts": [
     "docs/roadmap.md",

@@ -60,7 +60,16 @@
     "scope": [
       "docs/providers.md",
       "data/sources.json",
-      "experiments/providers/"
+      "experiments/providers/",
+      "README.md",
+      "CONTRIBUTING.md",
+      "GOVERNANCE.md",
+      "docs/",
+      "data/tasks.json",
+      "data/project.json",
+      "tasks/",
+      "receipts/",
+      "tools/render.py"
     ],
     "agent_suitability": "suitable",
     "owner": null,

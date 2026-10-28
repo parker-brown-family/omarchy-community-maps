@@ -8,7 +8,7 @@ The project aims for Google Maps-depth usefulness. Its first 34 tasks emphasize 
 
 ## Selected Approach
 
-Compare CoMaps and GNOME Maps for a useful application path while independently investigating a bounded regional MOTIS service. Retain the existing trip/location/pack/platform seams and all original task IDs. Move transit discovery from P3 to P0; keep its DATA-01 provider gate. Add the 16 unclaimed proposal packets to the existing registry without new phase/state values or assigned humans.
+Compare CoMaps and GNOME Maps for a useful application path while independently investigating a bounded regional MOTIS service. Retain the existing trip/location/pack/platform seams and all original task IDs. Move transit discovery from P3 to P0; keep its DATA-01 provider gate. Record the maintainer-directed documentation scope under DATA-01 — Choose sustainable providers for the pilot, the existing trusted task for this source-discovery submission. New task IDs cannot authorize their own introduction. Add the 16 unclaimed proposal packets to the existing registry without new phase/state values or assigned humans.
 
 Permit places, imagery, traffic-source and accessibility research early. Their runtime integration remains a scoped continuation. Define task dependencies around required outputs rather than library categories: tile delivery needs the chosen pack contract; scheduled transit needs feed discovery and the service result; realtime needs static schedules; private sync needs the existing handoff/privacy work. Source feasibility does not require a phone or a completed production service.
 

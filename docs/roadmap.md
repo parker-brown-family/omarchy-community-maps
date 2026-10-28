@@ -29,7 +29,7 @@ P0–P3 are the existing task phases, not a requirement to finish every phone be
 
 Kelowna is the proposed first region because BC Transit's catalog lists static schedules, trip updates, service alerts and vehicle positions. The feed links have been checked against the catalog; binary contents have not been decoded or tested by this roadmap change. This is a source lead, not a working transit feature. See [the pilot procedure](transit-pilot.md).
 
-Keep TRANSIT-01 — Assess transit and live data and its history; move its discovery assessment to P0. Its DATA-01 dependency still applies to an accepted provider/integration decision. Catalog inspection and synthetic fixtures need no working phone. Later scheduled and realtime packets have their own acceptance tests.
+Keep TRANSIT-01 — Assess transit and live data and its history; move its discovery assessment to P0. The existing provider task now records the documentation scope directed by Parker's notes. Its DATA-01 dependency still applies to an accepted provider/integration decision. Catalog inspection and synthetic fixtures need no working phone. Later scheduled and realtime packets have their own acceptance tests.
 
 ## Contributions Enter Broadly
 

@@ -13,3 +13,5 @@ One combined plan. Parker's annotations approve the one-region comparison and in
 - [ ] Independent protected-branch review and merge.
 
 Turned out to be: 5/10. The main judgment was separating early research from delivery gates while preserving the existing task identities and review authority. Local verification passed; independent protected-branch review remains outstanding.
+
+Submission is source discovery under existing DATA-01 — Choose sustainable providers for the pilot. Protected-base CI rejected the initially proposed ROADMAP-01 ID because it is absent from trusted master. The provider task records Parker's expanded documentation scope; the checker is unchanged. ROADMAP-01 remains an unclaimed proposal.
