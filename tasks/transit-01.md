@@ -1,10 +1,10 @@
 # Assess transit and live data
 
-Task: TRANSIT-01. Phase: P3. Track: routing. State: unclaimed.
+Task: TRANSIT-01. Phase: P0. Track: routing. State: unclaimed.
 Owner and independent reviewer: unassigned.
 
 ## Purpose and acceptance
-Named region/feed/refresh/terms/cost; missed service and stale feed tested; absent coverage explicit.
+Start early with a named region, catalog-resolved feeds, terms, refresh assumptions and explicit unknown costs. Source discovery and synthetic fixtures need no mobile navigation. DATA-01 still gates the operating-provider/integration decision. Scheduled and realtime runtime work is separated into TRANSIT-02 and TRANSIT-03; test missed service and stale feeds before any delivered transit claim.
 
 ## Dependencies and roles
 Prerequisites: DATA-01.

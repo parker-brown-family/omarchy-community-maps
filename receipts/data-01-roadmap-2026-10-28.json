@@ -1,0 +1,48 @@
+{
+  "task": "DATA-01",
+  "base_revision": "1194ea31d62160ed44cfb3d401383d67979fa706",
+  "operator": "parker-brown-family",
+  "agent_tool": "Codex",
+  "model": "Codex; backend model identifier not exposed",
+  "cap_minutes": null,
+  "cap_cost": null,
+  "currency": null,
+  "elapsed_minutes": null,
+  "input_tokens": null,
+  "cached_tokens": null,
+  "output_tokens": null,
+  "cost": null,
+  "cost_kind": "unknown",
+  "cost_method": null,
+  "commands": [
+    "python3 tools/render.py",
+    "python3 tools/validate.py",
+    "python3 -m unittest discover -s tests -v",
+    "python3 tools/render.py --check",
+    "git diff --check origin/master -- . ':!docs/research/reuse-handoff-2026-10-28'"
+  ],
+  "tests_not_run": [
+    "Application installation and desktop trip",
+    "MOTIS or comparator build/import/runtime",
+    "Feed binary decoding and freshness checks",
+    "Physical navigation and device qualification"
+  ],
+  "failures": [
+    "Full staged whitespace check reports three original Markdown hard breaks and one EOF blank line in the byte-preserved source archive. Authored paths pass; source bytes and whitespace policy retained.",
+    "Initial protected-base CI rejected Task: ROADMAP-01 because new tasks are not trusted until merged. Corrected the current source-discovery submission to existing DATA-01 and recorded its maintainer-directed documentation scope; no policy changes."
+  ],
+  "artifacts": [
+    "docs/roadmap.md",
+    "docs/reuse-map.md",
+    "docs/transit-pilot.md",
+    "docs/research/roadmap-reconciliation-2026-10-28.json",
+    "docs/decisions/0001-reuse-first-maps.md"
+  ],
+  "limitations": [
+    "Prepared under Parker's explicit 2026-10-28 annotations; independent protected-branch review outstanding.",
+    "50 task packets remain unclaimed; none is runtime or device evidence.",
+    "Source package retained as research, not installed as canonical registry schema.",
+    "No hosted service, provider subscription, upstream communication or branch-rule change.",
+    "Exact backend token and cost telemetry unavailable."
+  ]
+}

@@ -6,6 +6,8 @@ Owner and independent reviewer: unassigned.
 ## Purpose and acceptance
 Compare tiles/search/routing/packs, terms, attribution, region, usage assumptions, cost/unknowns and quotas. Name operator and failure behavior.
 
+Parker's 2026-10-28 notes accept this source-discovery and roadmap revision: put sovereignty on the README, use the supplied reuse handoff, open contribution intake and separate application/service investigations. This documentation scope extends the provider research below. GOV-01 still gates an operating-provider commitment; source findings can be reviewed while roles remain vacant.
+
 ## Dependencies and roles
 Prerequisites: GOV-01.
 Roles: data, maps. Agent suitability: suitable.
@@ -15,6 +17,15 @@ Read AGENTS.md, CONTRIBUTING.md, docs/agent-contract.md and docs/feasibility.md.
 - docs/providers.md
 - data/sources.json
 - experiments/providers/
+- README.md
+- CONTRIBUTING.md
+- GOVERNANCE.md
+- docs/
+- data/tasks.json
+- data/project.json
+- tasks/
+- receipts/
+- tools/render.py
 
 ## Before starting
 Maintainer accepts claim, exact base revision, scope, time/spend cap, stop condition and independent acceptance procedure. Missing budget stays unknown and must be agreed before paid work. Do not expand scope or acquire credentials.

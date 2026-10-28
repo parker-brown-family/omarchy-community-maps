@@ -134,5 +134,109 @@
     "decision": "Read-only, pinned actions; no untrusted execution in privileged job.",
     "scope": "Checks do not replace independent source review.",
     "checked_on": "2026-10-27"
+  },
+  {
+    "id": "motis",
+    "url": "https://github.com/motis-project/motis",
+    "license": "MIT listed upstream; inspect selected revision",
+    "decision": "Compare integrated regional service before adding separate engines.",
+    "scope": "Source capabilities rechecked; observed master e0c24c874752d980f3f304573ed09385f67111d1; not built.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "otp",
+    "url": "https://github.com/opentripplanner/OpenTripPlanner",
+    "license": "LGPL; inspect components at selected revision",
+    "decision": "Transit alternative only for a demonstrated comparison need.",
+    "scope": "No runtime or regional performance tested.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "valhalla",
+    "url": "https://github.com/valhalla/valhalla",
+    "license": "Inspect selected code and graph/data licenses",
+    "decision": "Dedicated route comparator when integrated planning leaves an unmet case.",
+    "scope": "No client compatibility or resource claim.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "photon",
+    "url": "https://github.com/komoot/photon",
+    "license": "Inspect selected code and data licenses; demo service terms separate",
+    "decision": "Search comparator when existing app/MOTIS is insufficient.",
+    "scope": "Public demo is bounded and has no availability guarantee.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "maplibre-js",
+    "url": "https://github.com/maplibre/maplibre-gl-js",
+    "license": "Inspect selected renderer/dependency licenses",
+    "decision": "Potential comparison surface, not selected product shell.",
+    "scope": "Renderer supplies no offline search or route graph.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "protomaps",
+    "url": "https://github.com/protomaps/basemaps",
+    "license": "Inspect schema/style/font/data licenses separately",
+    "decision": "Candidate matching tile-generation/style pipeline.",
+    "scope": "No code/assets/data imported.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "pmtiles",
+    "url": "https://docs.protomaps.com/pmtiles/",
+    "license": "Archive specification; source data rights separate",
+    "decision": "Candidate display archive only.",
+    "scope": "Search/routing indexes remain separate.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "bc-transit",
+    "url": "https://www.bctransit.com/open-data/",
+    "license": "Agency terms apply; not CC0",
+    "decision": "Kelowna proposed static/alerts/updates/positions discovery.",
+    "scope": "Four catalog links checked; binaries not downloaded/decoded.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "bc-transit-terms",
+    "url": "https://www.bctransit.com/open-data/terms-of-use/",
+    "license": "Conditional, revocable agency terms; no acceptance asserted",
+    "decision": "Record terms and attribution for the accepted experiment.",
+    "scope": "Public access does not grant unconditional redistribution.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "gtfs-validator",
+    "url": "https://github.com/MobilityData/gtfs-validator",
+    "license": "Inspect selected validator/license",
+    "decision": "Use static schedule validation separately from itinerary tests.",
+    "scope": "No validator executed or feed quality finding.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "overture-places",
+    "url": "https://docs.overturemaps.org/guides/places/",
+    "license": "Source/theme-specific licensing and attribution",
+    "decision": "Candidate regional place-data comparison.",
+    "scope": "No regional sample, freshness or duplicate-quality result.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "panoramax",
+    "url": "https://docs.panoramax.fr/how-to-contribute/use-panoramax/",
+    "license": "Software, instance and image terms differ",
+    "decision": "Candidate imagery viewer with explicit coverage/capture-date states.",
+    "scope": "Local coverage not measured; no hosting selected.",
+    "checked_on": "2026-10-28"
+  },
+  {
+    "id": "drivebc-open511",
+    "url": "https://api.open511.gov.bc.ca/help",
+    "license": "API terms and data rights need accepted review",
+    "decision": "Road-event overlay candidate before route impact.",
+    "scope": "Events are not measured traffic speeds.",
+    "checked_on": "2026-10-28"
   }
 ]

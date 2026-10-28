@@ -1,0 +1,448 @@
+{
+  "schema": "omamaps-handoff-proposals-v1",
+  "checked_on": "2026-10-28",
+  "warning": "Proposals, not accepted assignments. Reconcile with current repo and human scope approval. Delivery stages D0-D5 are not repo phase values.",
+  "proposals": [
+    {
+      "proposal_id": "ROADMAP-01",
+      "title": "Publish reuse-first architecture and lane map",
+      "existing_task_ids": [],
+      "depends_on_proposals": [],
+      "delivery_stage": "D0",
+      "proposed_scope_paths": [
+        "docs/architecture.md",
+        "docs/roadmap.md",
+        "docs/reuse-map.md",
+        "data/sources.json",
+        "data/tasks.json",
+        "tasks/"
+      ],
+      "deliverable": "One planning PR aligning existing task registry with this handoff; no engine selected without evidence.",
+      "acceptance": [
+        "Keep existing IDs and human qualification gates.",
+        "Every candidate has primary sources, boundary, non-goals and first test.",
+        "Generated board matches canonical registries."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "SERVICE-01",
+      "title": "Compare integrated regional service with justified alternatives",
+      "existing_task_ids": [
+        "DATA-01",
+        "APP-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D1",
+      "proposed_scope_paths": [
+        "experiments/services/",
+        "docs/architecture.md"
+      ],
+      "deliverable": "MOTIS regional spike; OTP transit comparator and Valhalla road comparator only where workflow requires.",
+      "acceptance": [
+        "Exact revisions and same fixtures.",
+        "Cold/warm latency, RAM, import disk/time and request destinations recorded.",
+        "Unsupported capability stays explicit."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "TILE-01",
+      "title": "Produce a self-controlled regional display pack",
+      "existing_task_ids": [
+        "DATA-01",
+        "PACK-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D2",
+      "proposed_scope_paths": [
+        "experiments/packs/",
+        "contracts/",
+        "docs/providers.md"
+      ],
+      "deliverable": "Matching basemap/style/glyph/sprite bundle and manifest.",
+      "acceptance": [
+        "No hidden external asset fetch.",
+        "Visible attribution.",
+        "Corruption, disk-full and failed update preserve last valid pack."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "SEARCH-01",
+      "title": "Benchmark regional place and address search",
+      "existing_task_ids": [
+        "APP-01",
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "SERVICE-01"
+      ],
+      "delivery_stage": "D2",
+      "proposed_scope_paths": [
+        "experiments/search/",
+        "fixtures/search/",
+        "docs/providers.md"
+      ],
+      "deliverable": "Held-out search corpus and measured candidate report.",
+      "acceptance": [
+        "Typo, ambiguous, multilingual and missing-address cases.",
+        "Top-k relevance, latency and source freshness recorded.",
+        "Out-of-region differs from no match."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "TRANSIT-02",
+      "title": "Plan scheduled regional transit",
+      "existing_task_ids": [
+        "TRANSIT-01",
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "SERVICE-01"
+      ],
+      "delivery_stage": "D3",
+      "proposed_scope_paths": [
+        "experiments/transit/",
+        "fixtures/transit/",
+        "contracts/"
+      ],
+      "deliverable": "One-city static timetable integration and itinerary fixtures.",
+      "acceptance": [
+        "Feed validity checked.",
+        "Walk\u2013bus\u2013walk and transfer trips.",
+        "After-midnight and no-service cases.",
+        "Unknown fares/accessibility are not fabricated."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "TRANSIT-03",
+      "title": "Apply and expire realtime transit",
+      "existing_task_ids": [
+        "TRANSIT-01"
+      ],
+      "depends_on_proposals": [
+        "TRANSIT-02"
+      ],
+      "delivery_stage": "D3",
+      "proposed_scope_paths": [
+        "experiments/transit/",
+        "fixtures/transit/",
+        "docs/providers.md"
+      ],
+      "deliverable": "Freshness-aware trip updates, alerts and vehicle overlays.",
+      "acceptance": [
+        "Static/realtime ID mismatch.",
+        "Cancellation, skipped stop, out-of-order event and reconnect.",
+        "Stale realtime falls back to labelled schedule, never pretends to be live."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "PLACE-01",
+      "title": "Add provenance-aware place enrichment",
+      "existing_task_ids": [
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "SEARCH-01"
+      ],
+      "delivery_stage": "D4",
+      "proposed_scope_paths": [
+        "experiments/places/",
+        "fixtures/places/",
+        "docs/providers.md"
+      ],
+      "deliverable": "Regional OSM/Overture comparison; optional AllThePlaces enrichment with reviewed merging.",
+      "acceptance": [
+        "Duplicate and contradictory records remain traceable.",
+        "Hours/closure confidence source visible.",
+        "No imported proprietary reviews."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "INCIDENT-01",
+      "title": "Show expiry-aware road events",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D4",
+      "proposed_scope_paths": [
+        "integrations/overlays/",
+        "fixtures/incidents/"
+      ],
+      "deliverable": "DriveBC/Open511 display overlay first; no automatic rerouting until separately accepted.",
+      "acceptance": [
+        "Partial road closure and unrelated nearby road.",
+        "Expired/deleted event.",
+        "Unknown geometry and provider outage."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "TRAFFIC-01",
+      "title": "Establish lawful traffic inputs and ETA evaluation",
+      "existing_task_ids": [
+        "ROAD-01",
+        "PRIV-01"
+      ],
+      "depends_on_proposals": [
+        "INCIDENT-01"
+      ],
+      "delivery_stage": "D5",
+      "proposed_scope_paths": [
+        "experiments/traffic/",
+        "docs/providers.md"
+      ],
+      "deliverable": "Data/coverage feasibility report; no promise of live speed without a feed.",
+      "acceptance": [
+        "Separate historical assumptions, measured speeds and incident penalties.",
+        "Missing coverage explicit.",
+        "Opt-in privacy review before collecting any traces."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "IMAGERY-01",
+      "title": "Integrate a licensed street-imagery panel",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D4",
+      "proposed_scope_paths": [
+        "integrations/imagery/",
+        "fixtures/imagery/"
+      ],
+      "deliverable": "Panoramax viewer/API spike with coverage and capture-date states.",
+      "acceptance": [
+        "No imagery fallback.",
+        "Attribution and license retained.",
+        "Privacy, blurring and takedown review before contribution hosting."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "COMMUNITY-01",
+      "title": "Separate corrections, shared places and reviews",
+      "existing_task_ids": [
+        "PRIV-01",
+        "INT-01"
+      ],
+      "depends_on_proposals": [
+        "PLACE-01"
+      ],
+      "delivery_stage": "D5",
+      "proposed_scope_paths": [
+        "docs/community-data.md",
+        "contracts/",
+        "design/"
+      ],
+      "deliverable": "Human-owned correction flow and a separate reviews/moderation proposal.",
+      "acceptance": [
+        "No automatic upstream edits.",
+        "No location history in public submissions.",
+        "Spam/takedown/authorship and data export addressed before public reviews."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "SYNC-01",
+      "title": "Design private saved places and portable trip handoff",
+      "existing_task_ids": [
+        "HAND-01",
+        "PRIV-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D2",
+      "proposed_scope_paths": [
+        "contracts/",
+        "experiments/handoff/",
+        "docs/architecture.md"
+      ],
+      "deliverable": "Local-first list/trip format and optional paired-device sync design.",
+      "acceptance": [
+        "No mandatory account.",
+        "Only explicitly selected destination shared.",
+        "Revocation, duplicate import and private label stripping."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "ACCESS-01",
+      "title": "Validate physical-accessibility data and route semantics",
+      "existing_task_ids": [
+        "UX-02",
+        "ROUTE-01"
+      ],
+      "depends_on_proposals": [
+        "TRANSIT-02"
+      ],
+      "delivery_stage": "D4",
+      "proposed_scope_paths": [
+        "fixtures/accessibility/",
+        "docs/device-testing.md",
+        "design/"
+      ],
+      "deliverable": "Separate UI accessibility from real-world route accessibility tests.",
+      "acceptance": [
+        "Unknown kerb/elevator/entrance data remains unknown.",
+        "Broken lift or inaccessible transfer.",
+        "Human verification before accessibility promises."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "TERRAIN-01",
+      "title": "Scope satellite and terrain layers",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "ROADMAP-01"
+      ],
+      "delivery_stage": "D5",
+      "proposed_scope_paths": [
+        "experiments/terrain/",
+        "docs/providers.md"
+      ],
+      "deliverable": "One-source imagery demonstration and separate elevation-source investigation.",
+      "acceptance": [
+        "Resolution/date/cloud/no-data labels.",
+        "License and storage budget.",
+        "No implication of high-resolution aerial coverage."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "OPS-02",
+      "title": "Measure region build and distribution costs",
+      "existing_task_ids": [
+        "OPS-01",
+        "PACK-01",
+        "REL-01"
+      ],
+      "depends_on_proposals": [
+        "TILE-01"
+      ],
+      "delivery_stage": "D2",
+      "proposed_scope_paths": [
+        "experiments/operations/",
+        "docs/providers.md",
+        "docs/pilot.md"
+      ],
+      "deliverable": "Reproducible measured cost model and quotas for one region.",
+      "acceptance": [
+        "Build RAM/disk/time and pack bytes.",
+        "Cold download/refresh egress.",
+        "Recovery, deletion, mirror loss and budget cap behavior."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    },
+    {
+      "proposal_id": "COVERAGE-01",
+      "title": "Add a second independent region",
+      "existing_task_ids": [
+        "DATA-01"
+      ],
+      "depends_on_proposals": [
+        "TRANSIT-03",
+        "OPS-02"
+      ],
+      "delivery_stage": "D5",
+      "proposed_scope_paths": [
+        "docs/region-onboarding.md",
+        "data/",
+        "fixtures/regions/"
+      ],
+      "deliverable": "Region onboarding recipe separating code readiness from data coverage.",
+      "acceptance": [
+        "Different agency/source conventions.",
+        "No hardcoded pilot feed IDs.",
+        "Missing realtime/search/imagery shown per capability."
+      ],
+      "owner": null,
+      "reviewer": null,
+      "state": "proposal",
+      "implementation_authorized": false,
+      "repo_phase": null
+    }
+  ]
+}

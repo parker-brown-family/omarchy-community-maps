@@ -1,0 +1,672 @@
+{
+  "schema": "omamaps-handoff-reuse-v1",
+  "checked_on": "2026-10-28",
+  "warning": "Research candidates only. Not canonical repo data. No resource is qualified.",
+  "resources": [
+    {
+      "id": "comaps",
+      "lane": "Client and offline navigation",
+      "existing_task_ids": [
+        "APP-01",
+        "PKG-01",
+        "PACK-02",
+        "AND-01",
+        "NAV-01"
+      ],
+      "kind": "whole_application",
+      "choice": "first_comparison",
+      "integration": "Install and compare; use tested handoff/export boundaries before considering a fork.",
+      "provides": "Integrated map, search, routing and downloadable data.",
+      "not_provided": "No verified Omarchy Linux/mobile feature parity or arbitrary service-plugin contract.",
+      "first_acceptance_test": "Same fixed desktop trip, no-location behavior and network-disconnected display/search/route.",
+      "source_ids": [
+        "S13"
+      ],
+      "alternatives": [
+        "gnome",
+        "organic"
+      ],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "gnome",
+      "lane": "Desktop planning",
+      "existing_task_ids": [
+        "APP-01",
+        "UX-01",
+        "PKG-01",
+        "TRANSIT-01"
+      ],
+      "kind": "whole_application",
+      "choice": "first_comparison",
+      "integration": "Compare installed version and inspect actual service requests.",
+      "provides": "Linux planning baseline; upstream Transitous integration exists.",
+      "not_provided": "No inferred offline completeness or local-endpoint switching.",
+      "first_acceptance_test": "Search and pedestrian trip with location denied; record every external domain.",
+      "source_ids": [
+        "S17"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "organic",
+      "lane": "Offline reference",
+      "existing_task_ids": [
+        "APP-01",
+        "AND-01"
+      ],
+      "kind": "whole_application",
+      "choice": "candidate",
+      "integration": "Use as justified additional comparator, not another maintained fork.",
+      "provides": "Offline product/reference implementation.",
+      "not_provided": "No default engine choice or platform certification.",
+      "first_acceptance_test": "Compare only gaps left unresolved by the two main candidates.",
+      "source_ids": [
+        "S19"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "maplibre-js",
+      "lane": "Rendering",
+      "existing_task_ids": [
+        "WEB-01",
+        "UX-01",
+        "INT-01"
+      ],
+      "kind": "library",
+      "choice": "candidate",
+      "integration": "Thin browser test harness; service JSON and map layers.",
+      "provides": "Vector-map rendering.",
+      "not_provided": "Routing, place search, GPS, packs and voice navigation.",
+      "first_acceptance_test": "Render fixed region, route line, attribution and provider failure without remote font leaks.",
+      "source_ids": [
+        "S20"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "maplibre-qt",
+      "lane": "Native rendering",
+      "existing_task_ids": [
+        "APP-01",
+        "UX-02",
+        "ARM-01",
+        "ARM-02",
+        "TAB-01",
+        "TAB-02"
+      ],
+      "kind": "library",
+      "choice": "candidate",
+      "integration": "Qt bindings to MapLibre Native after client decision.",
+      "provides": "Native/Qt map surface.",
+      "not_provided": "Drop-in JS protocol parity or proven Wayland/GPU support.",
+      "first_acceptance_test": "Exact target GPU, fractional scaling, touch and selected offline-source transport.",
+      "source_ids": [
+        "S22"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "motis",
+      "lane": "Multimodal service core",
+      "existing_task_ids": [
+        "ROUTE-01",
+        "TRANSIT-01",
+        "DATA-01",
+        "WEB-01"
+      ],
+      "kind": "self_hostable_service",
+      "choice": "first_service_spike",
+      "integration": "Versioned REST/OpenAPI adapter; regional OSM and GTFS import.",
+      "provides": "Transit, street planning, geocoding and tiles.",
+      "not_provided": "Complete device navigation lifecycle or automatic regional data quality.",
+      "first_acceptance_test": "One regional timetable with transfer, after-midnight service, stale realtime and endpoint-offline cases.",
+      "source_ids": [
+        "S23"
+      ],
+      "alternatives": [
+        "otp",
+        "valhalla",
+        "photon"
+      ],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "otp",
+      "lane": "Transit alternative",
+      "existing_task_ids": [
+        "TRANSIT-01",
+        "DATA-01"
+      ],
+      "kind": "self_hostable_service",
+      "choice": "candidate",
+      "integration": "Versioned GraphQL adapter; JVM service.",
+      "provides": "Timetable and multimodal routing with realtime updates.",
+      "not_provided": "Client shell or complete map/search/pack stack.",
+      "first_acceptance_test": "Same transit fixtures as MOTIS; compare import/runtime memory and unsupported fields.",
+      "source_ids": [
+        "S25"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "valhalla",
+      "lane": "Road and walking engine",
+      "existing_task_ids": [
+        "ROUTE-01",
+        "ROAD-01",
+        "NAV-01",
+        "PACK-02"
+      ],
+      "kind": "engine_or_service",
+      "choice": "candidate",
+      "integration": "JSON API initially; local deployment only after resource tests.",
+      "provides": "Routing and instructions with configurable travel profiles.",
+      "not_provided": "Live traffic data supply or complete mobile guidance.",
+      "first_acceptance_test": "Walk/drive discrimination, restrictions, graph edge coverage, instructions and rerouting.",
+      "source_ids": [
+        "S26"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "photon",
+      "lane": "Place and address search",
+      "existing_task_ids": [
+        "DATA-01",
+        "APP-01",
+        "PACK-02"
+      ],
+      "kind": "self_hostable_service",
+      "choice": "candidate",
+      "integration": "Bounded geocoder adapter, selected backend/import pipeline.",
+      "provides": "Typeahead, multilingual and reverse geocoding.",
+      "not_provided": "Phone-sized offline search pack or business freshness by itself.",
+      "first_acceptance_test": "Held-out multilingual, typo, ambiguous address and no-result corpus.",
+      "source_ids": [
+        "S27"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "pelias",
+      "lane": "Multi-source search",
+      "existing_task_ids": [
+        "DATA-01",
+        "APP-01"
+      ],
+      "kind": "self_hostable_service",
+      "choice": "candidate",
+      "integration": "Alternative only when a measured import/search requirement justifies it.",
+      "provides": "Pluggable multi-source geocoding approach.",
+      "not_provided": "Turnkey importer for all selected datasets or low operating cost.",
+      "first_acceptance_test": "Run the same search corpus and disclose dependencies and resource use.",
+      "source_ids": [
+        "S28"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "protomaps",
+      "lane": "Basemap build and styling",
+      "existing_task_ids": [
+        "DATA-01",
+        "PACK-01",
+        "PACK-02",
+        "WEB-01"
+      ],
+      "kind": "build_pipeline",
+      "choice": "candidate",
+      "integration": "Use matching generator, tile schema, style, glyphs and sprites.",
+      "provides": "Reusable basemap-generation and styling system.",
+      "not_provided": "Search index, navigation graph or every data license.",
+      "first_acceptance_test": "Pin profile/schema/style together and render all required labels without internet.",
+      "source_ids": [
+        "S30"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "planetiler",
+      "lane": "Map data compilation",
+      "existing_task_ids": [
+        "DATA-01",
+        "PACK-01"
+      ],
+      "kind": "build_tool",
+      "choice": "candidate",
+      "integration": "Build regional vector archives with selected profile.",
+      "provides": "Vector tiles and archive output.",
+      "not_provided": "Navigation runtime or unbounded free build infrastructure.",
+      "first_acceptance_test": "Record source digest, output digest, import time, peak RAM/disk and schema.",
+      "source_ids": [
+        "S31"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "pmtiles",
+      "lane": "Display-pack storage",
+      "existing_task_ids": [
+        "PACK-01",
+        "PACK-02"
+      ],
+      "kind": "format_and_library",
+      "choice": "candidate",
+      "integration": "GL JS protocol or explicitly tested local/Native adapter.",
+      "provides": "Single-file tiled map archive.",
+      "not_provided": "Search, routing, incremental in-place updates or universal engine format.",
+      "first_acceptance_test": "Disconnected map load, local byte-range access and interrupted replacement.",
+      "source_ids": [
+        "S32"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "geofabrik",
+      "lane": "Regional base data",
+      "existing_task_ids": [
+        "DATA-01",
+        "PACK-01",
+        "ROUTE-01"
+      ],
+      "kind": "public_dataset",
+      "choice": "candidate",
+      "integration": "Pinned OSM PBF, region extract with routing buffer.",
+      "provides": "Road/path/map input and updates.",
+      "not_provided": "Ready-to-use app database or pack-license exemption.",
+      "first_acceptance_test": "Resolve extract date, boundary and digest; preserve routes crossing test-area edge.",
+      "source_ids": [
+        "S37"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "bct",
+      "lane": "Pilot transit data",
+      "existing_task_ids": [
+        "DATA-01",
+        "TRANSIT-01"
+      ],
+      "kind": "public_feeds",
+      "choice": "proposed_pilot",
+      "integration": "Static GTFS plus separately bounded protobuf fetchers.",
+      "provides": "Kelowna timetable, alerts, trip updates and vehicle positions catalog links.",
+      "not_provided": "Decoded, fresh or complete feed guarantee.",
+      "first_acceptance_test": "Parse feeds; check service dates, joins, freshness, terms and missing entities.",
+      "source_ids": [
+        "S38"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "gtfs-validator",
+      "lane": "Transit quality",
+      "existing_task_ids": [
+        "TRANSIT-01"
+      ],
+      "kind": "build_and_qa_tool",
+      "choice": "candidate",
+      "integration": "Run offline on pinned static-feed fixture.",
+      "provides": "Structured static-feed validation.",
+      "not_provided": "Realtime consistency or useful itinerary guarantee.",
+      "first_acceptance_test": "Save validator report and separately check real itinerary expectations.",
+      "source_ids": [
+        "S42"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "mobilitydb",
+      "lane": "Regional discovery",
+      "existing_task_ids": [
+        "DATA-01",
+        "TRANSIT-01"
+      ],
+      "kind": "catalog",
+      "choice": "candidate",
+      "integration": "Use to discover publishers, then audit each source.",
+      "provides": "Feed discovery metadata.",
+      "not_provided": "One license covering all feeds or automatic global coverage.",
+      "first_acceptance_test": "One additional region onboarded with explicit rights and freshness.",
+      "source_ids": [
+        "S43"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "transitous",
+      "lane": "Optional hosted transit",
+      "existing_task_ids": [
+        "DATA-01",
+        "TRANSIT-01",
+        "WEB-01"
+      ],
+      "kind": "community_service",
+      "choice": "candidate",
+      "integration": "Opt-in policy-compliant endpoint; replaceable with self-hosted MOTIS.",
+      "provides": "Operated transit service and existing integration examples.",
+      "not_provided": "Unlimited capacity, SLA, default sovereignty or commercial-use permission.",
+      "first_acceptance_test": "Manual bounded request only after eligibility review; all CI uses fixtures.",
+      "source_ids": [
+        "S44"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "gbfs",
+      "lane": "Shared mobility",
+      "existing_task_ids": [
+        "TRANSIT-01"
+      ],
+      "kind": "public_standard",
+      "choice": "candidate",
+      "integration": "Provider adapter for available bikes/scooters and stations.",
+      "provides": "Standardized mobility availability input.",
+      "not_provided": "Booking, payment or guaranteed vehicle presence.",
+      "first_acceptance_test": "Expired station availability, unavailable bike and inaccessible dock cases.",
+      "source_ids": [
+        "S45"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "overture",
+      "lane": "Places and business discovery",
+      "existing_task_ids": [
+        "DATA-01"
+      ],
+      "kind": "public_dataset",
+      "choice": "candidate",
+      "integration": "Regional extraction with source-specific provenance; dedup as separate reviewed work.",
+      "provides": "Additional place/business records.",
+      "not_provided": "Google reviews, live busy-times, verified current hours or one blanket license.",
+      "first_acceptance_test": "Sample local places and contradictions; distinguish absent fields from false values.",
+      "source_ids": [
+        "S46"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "alltheplaces",
+      "lane": "Place enrichment",
+      "existing_task_ids": [
+        "DATA-01"
+      ],
+      "kind": "public_data_project",
+      "choice": "candidate",
+      "integration": "Assess existing releases; avoid new scraping without approval.",
+      "provides": "Published location-data extraction ecosystem.",
+      "not_provided": "Automatic legal permission for arbitrary sites or universal independent-business coverage.",
+      "first_acceptance_test": "Audit regional sample provenance and duplicate handling.",
+      "source_ids": [
+        "S48"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "panoramax",
+      "lane": "Street imagery",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01",
+        "PRIV-01"
+      ],
+      "kind": "federated_service_and_viewer",
+      "choice": "candidate",
+      "integration": "STAC/OGC imagery lookup to separate imagery panel.",
+      "provides": "Open/self-hostable street imagery infrastructure.",
+      "not_provided": "Imagery everywhere, current capture dates or completed privacy review.",
+      "first_acceptance_test": "Show capture date/license; handle no coverage and takedown/blur states.",
+      "source_ids": [
+        "S49"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "drivebc",
+      "lane": "Road events",
+      "existing_task_ids": [
+        "INT-01",
+        "ROAD-01",
+        "DATA-01"
+      ],
+      "kind": "public_feed",
+      "choice": "candidate",
+      "integration": "Open511 event adapter; display first, route penalties later.",
+      "provides": "Closures, construction and incident information.",
+      "not_provided": "Measured network-wide speed, congestion prediction or automatic map-edge matching.",
+      "first_acceptance_test": "Expired event, partial closure, geometry mismatch and no-data states.",
+      "source_ids": [
+        "S52"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "geoclue",
+      "lane": "Linux location",
+      "existing_task_ids": [
+        "LOC-01",
+        "LOC-02",
+        "MOB-01"
+      ],
+      "kind": "platform_api",
+      "choice": "candidate",
+      "integration": "D-Bus adapter preserving timing provenance and uncertainty.",
+      "provides": "Location values and provider metadata.",
+      "not_provided": "Guaranteed GNSS, fresh measurement or exact accuracy.",
+      "first_acceptance_test": "Old timestamp, receipt-only time, permission revocation and unknown uncertainty.",
+      "source_ids": [
+        "S53"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "android",
+      "lane": "Android location",
+      "existing_task_ids": [
+        "AND-01",
+        "AND-02",
+        "BRIDGE-01",
+        "NAV-02"
+      ],
+      "kind": "platform_api",
+      "choice": "candidate",
+      "integration": "Android platform provider; lifecycle policy reviewed per target SDK.",
+      "provides": "Native location interface.",
+      "not_provided": "Automatic guest GPS, background access or Google-free network providers by assumption.",
+      "first_acceptance_test": "Permissions denied/approximate, process suspension, restart and screen-off behavior.",
+      "source_ids": [
+        "S55"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "streetcomplete",
+      "lane": "Community corrections",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "kind": "whole_application_reference",
+      "choice": "candidate",
+      "integration": "Human contribution handoff/learning path.",
+      "provides": "Existing workflow for improving OSM attributes.",
+      "not_provided": "Reviews, autonomous map editing or permission to bulk-import private data.",
+      "first_acceptance_test": "Human sees exact source/target and confirms before any public edit.",
+      "source_ids": [
+        "S56"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "sentinel",
+      "lane": "Satellite layer",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "kind": "public_dataset",
+      "choice": "candidate",
+      "integration": "Later imagery ingestion/rendering investigation.",
+      "provides": "Satellite imagery source.",
+      "not_provided": "Street photography or high-resolution urban aerial replacement.",
+      "first_acceptance_test": "One licensed sample with date, resolution, cloud/no-data and download cost shown.",
+      "source_ids": [
+        "S57"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "omamesh",
+      "lane": "Mesh contact overlay",
+      "existing_task_ids": [
+        "INT-01",
+        "PRIV-01"
+      ],
+      "kind": "omarchy_integration_reference",
+      "choice": "candidate",
+      "integration": "Reuse audited transport/state ideas or a bounded adapter; do not inherit remote basemap defaults.",
+      "provides": "MeshCore contact coordinates, messaging and transport-state patterns.",
+      "not_provided": "Sovereign basemap, routed navigation or proof that advertised coordinates are fresh device fixes.",
+      "first_acceptance_test": "Old/invalid advertised position, disconnected companion and privacy of shared contact IDs.",
+      "source_ids": [
+        "S58"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    },
+    {
+      "id": "omastorm",
+      "lane": "Weather observation overlay",
+      "existing_task_ids": [
+        "INT-01",
+        "DATA-01"
+      ],
+      "kind": "omarchy_integration_reference",
+      "choice": "candidate",
+      "integration": "Evaluate engine/UI boundary and timestamped overlay contract.",
+      "provides": "Radar observation integration and freshness/coverage UX patterns.",
+      "not_provided": "Canada-wide radar, weather warnings, navigation safety certification or actual GPS.",
+      "first_acceptance_test": "Stale frame, provider outage, outside coverage and correct observation-time labeling.",
+      "source_ids": [
+        "S59"
+      ],
+      "alternatives": [],
+      "pinned_revision": null,
+      "license_review": "required_at_selected_revision",
+      "evidence": "source_review_only",
+      "qualified_for_omamaps": false
+    }
+  ]
+}

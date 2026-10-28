@@ -60,7 +60,16 @@
     "scope": [
       "docs/providers.md",
       "data/sources.json",
-      "experiments/providers/"
+      "experiments/providers/",
+      "README.md",
+      "CONTRIBUTING.md",
+      "GOVERNANCE.md",
+      "docs/",
+      "data/tasks.json",
+      "data/project.json",
+      "tasks/",
+      "receipts/",
+      "tools/render.py"
     ],
     "agent_suitability": "suitable",
     "owner": null,
@@ -758,7 +767,7 @@
     "id": "TRANSIT-01",
     "title": "Assess transit and live data",
     "track": "routing",
-    "phase": "P3",
+    "phase": "P0",
     "depends_on": [
       "DATA-01"
     ],
@@ -821,5 +830,394 @@
     "state": "unclaimed",
     "packet": "tasks/doc-02.md",
     "issue_url": "https://github.com/parker-brown-family/omarchy-community-maps/issues/34"
+  },
+  {
+    "id": "ROADMAP-01",
+    "title": "Publish reuse-first architecture and lane map",
+    "track": "documentation",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "docs",
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "GOVERNANCE.md",
+      "docs/",
+      "data/tasks.json",
+      "data/sources.json",
+      "data/project.json",
+      "tasks/",
+      "receipts/",
+      "tools/render.py"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/roadmap-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "SERVICE-01",
+    "title": "Compare a regional MOTIS service with justified alternatives",
+    "track": "services",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "maps",
+      "data",
+      "linux"
+    ],
+    "scope": [
+      "experiments/services/",
+      "docs/architecture.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/service-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "TILE-01",
+    "title": "Produce a self-controlled regional display pack",
+    "track": "data",
+    "phase": "P1",
+    "depends_on": [
+      "DATA-01",
+      "PACK-01"
+    ],
+    "roles": [
+      "maps",
+      "data",
+      "security"
+    ],
+    "scope": [
+      "experiments/packs/",
+      "contracts/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/tile-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "SEARCH-01",
+    "title": "Benchmark regional place and address search",
+    "track": "search",
+    "phase": "P0",
+    "depends_on": [
+      "APP-01",
+      "SERVICE-01"
+    ],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/search/",
+      "fixtures/search/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/search-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "TRANSIT-02",
+    "title": "Plan scheduled regional transit",
+    "track": "transit",
+    "phase": "P1",
+    "depends_on": [
+      "TRANSIT-01",
+      "SERVICE-01"
+    ],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/transit/",
+      "fixtures/transit/",
+      "contracts/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/transit-02.md",
+    "issue_url": null
+  },
+  {
+    "id": "TRANSIT-03",
+    "title": "Apply and expire realtime transit",
+    "track": "transit",
+    "phase": "P1",
+    "depends_on": [
+      "TRANSIT-02"
+    ],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/transit/",
+      "fixtures/transit/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/transit-03.md",
+    "issue_url": null
+  },
+  {
+    "id": "PLACE-01",
+    "title": "Add provenance-aware place enrichment",
+    "track": "places",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/places/",
+      "fixtures/places/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/place-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "INCIDENT-01",
+    "title": "Show expiry-aware road events",
+    "track": "overlays",
+    "phase": "P1",
+    "depends_on": [
+      "DATA-01"
+    ],
+    "roles": [
+      "maps",
+      "data",
+      "security"
+    ],
+    "scope": [
+      "integrations/overlays/",
+      "fixtures/incidents/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/incident-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "TRAFFIC-01",
+    "title": "Establish lawful traffic inputs and ETA evaluation",
+    "track": "traffic",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "maps",
+      "data",
+      "security"
+    ],
+    "scope": [
+      "experiments/traffic/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/traffic-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "IMAGERY-01",
+    "title": "Integrate a licensed street-imagery panel",
+    "track": "imagery",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "maps",
+      "data",
+      "security"
+    ],
+    "scope": [
+      "integrations/imagery/",
+      "fixtures/imagery/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/imagery-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "COMMUNITY-01",
+    "title": "Separate corrections, shared places and reviews",
+    "track": "community",
+    "phase": "P1",
+    "depends_on": [
+      "PLACE-01",
+      "PRIV-01"
+    ],
+    "roles": [
+      "maps",
+      "security",
+      "docs"
+    ],
+    "scope": [
+      "docs/community-data.md",
+      "contracts/",
+      "design/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/community-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "SYNC-01",
+    "title": "Design private saved places and portable trip handoff",
+    "track": "integration",
+    "phase": "P1",
+    "depends_on": [
+      "HAND-01",
+      "PRIV-01"
+    ],
+    "roles": [
+      "desktop",
+      "security"
+    ],
+    "scope": [
+      "contracts/",
+      "experiments/handoff/",
+      "docs/architecture.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/sync-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "ACCESS-01",
+    "title": "Validate physical-accessibility data and route semantics",
+    "track": "accessibility",
+    "phase": "P0",
+    "depends_on": [],
+    "roles": [
+      "maps",
+      "touch",
+      "hardware"
+    ],
+    "scope": [
+      "fixtures/accessibility/",
+      "docs/device-testing.md",
+      "design/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/access-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "TERRAIN-01",
+    "title": "Scope satellite and terrain layers",
+    "track": "imagery",
+    "phase": "P1",
+    "depends_on": [
+      "DATA-01"
+    ],
+    "roles": [
+      "maps",
+      "data"
+    ],
+    "scope": [
+      "experiments/terrain/",
+      "docs/providers.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/terrain-01.md",
+    "issue_url": null
+  },
+  {
+    "id": "OPS-02",
+    "title": "Measure region build and distribution costs",
+    "track": "operations",
+    "phase": "P1",
+    "depends_on": [
+      "TILE-01"
+    ],
+    "roles": [
+      "data",
+      "automation"
+    ],
+    "scope": [
+      "experiments/operations/",
+      "docs/providers.md",
+      "docs/pilot.md"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/ops-02.md",
+    "issue_url": null
+  },
+  {
+    "id": "COVERAGE-01",
+    "title": "Add a second independent region",
+    "track": "data",
+    "phase": "P2",
+    "depends_on": [
+      "TRANSIT-03",
+      "OPS-02"
+    ],
+    "roles": [
+      "maps",
+      "data",
+      "reviewer"
+    ],
+    "scope": [
+      "docs/region-onboarding.md",
+      "data/",
+      "fixtures/regions/"
+    ],
+    "agent_suitability": "assist",
+    "owner": null,
+    "reviewer": null,
+    "state": "unclaimed",
+    "packet": "tasks/coverage-01.md",
+    "issue_url": null
   }
 ]
